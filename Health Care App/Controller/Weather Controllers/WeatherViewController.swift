@@ -16,4 +16,7 @@ class WeatherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func goToWeatherInfo(_ sender: UIButton){
+        self.performSegue(withIdentifier: "goToWeatherInfo", sender: self)
+    }
 }

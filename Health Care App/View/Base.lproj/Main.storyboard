@@ -11,16 +11,16 @@
         <!--Weather-->
         <scene sceneID="d2c-SP-eP4">
             <objects>
-                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfH-b7-TkU" customClass="WeatherViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherInformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfH-b7-TkU" customClass="WeatherInformationViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUp-EP-7gu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="jNM-qn-fZf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-Sh-Z3L">
-                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MFE-Mc-JS7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -88,7 +88,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-ow-6Kk">
-                                        <rect key="frame" x="134" y="355.5" width="240" height="413.5"/>
+                                        <rect key="frame" x="134" y="355.5" width="240" height="452.5"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -120,30 +120,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZG-Ug-Ba9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="1505"/>
+            <point key="canvasLocation" x="1848" y="1539"/>
         </scene>
         <!--BMI-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CalculateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CalculateViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculate_background" translatesAutoresizingMaskIntoConstraints="NO" id="jAn-a3-P8b">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-Ov-ksm">
-                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE YOUR BMI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-O8-hci">
-                                        <rect key="frame" x="22.5" y="0.0" width="329" height="505"/>
+                                        <rect key="frame" x="22.5" y="0.0" width="329" height="544"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="n36-iZ-Nux">
-                                        <rect key="frame" x="0.0" y="515" width="374" height="21"/>
+                                        <rect key="frame" x="0.0" y="554" width="374" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boe-dG-V5Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="21"/>
@@ -173,7 +173,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4.5" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="00q-Zh-KfL">
-                                        <rect key="frame" x="-2" y="546" width="378" height="61"/>
+                                        <rect key="frame" x="-2" y="585" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="hof-hT-KrP"/>
                                         </constraints>
@@ -182,7 +182,7 @@
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1LL-x2-7P7">
-                                        <rect key="frame" x="0.0" y="616" width="374" height="21"/>
+                                        <rect key="frame" x="0.0" y="655" width="374" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-S1-wSa">
                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="21"/>
@@ -208,7 +208,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-9Q-Rhx">
-                                        <rect key="frame" x="-2" y="647" width="378" height="61"/>
+                                        <rect key="frame" x="-2" y="686" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="7qm-8r-w2Y"/>
                                         </constraints>
@@ -217,7 +217,7 @@
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rk-fd-jXV">
-                                        <rect key="frame" x="0.0" y="717" width="374" height="52"/>
+                                        <rect key="frame" x="0.0" y="756" width="374" height="52"/>
                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="VbZ-gh-cc2"/>
@@ -270,14 +270,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1812" y="100"/>
         </scene>
         <!--Covid19-->
         <scene sceneID="wXK-K7-frX">
             <objects>
-                <viewController storyboardIdentifier="Covid19ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r96-w0-ocv" customClass="Covid19ViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Covid19UpdateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r96-w0-ocv" customClass="Covid19UpdateViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sqJ-Xc-qhH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="13e-HC-N5d"/>
@@ -286,12 +286,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d32-sE-KpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="777"/>
+            <point key="canvasLocation" x="1848" y="777"/>
+        </scene>
+        <!--Covid19-->
+        <scene sceneID="JJE-zY-xCe">
+            <objects>
+                <viewController storyboardIdentifier="Covid19ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ibh-hz-156" customClass="Covid19ViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wEU-RG-aEx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-zq-ajK">
+                                <rect key="frame" x="0.0" y="59" width="414" height="739"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri8-Rz-KGh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="203.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Covid19 to Stay Safe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tj-mZ-9gh">
+                                                <rect key="frame" x="0.0" y="65" width="414" height="74"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="centerX" secondItem="ri8-Rz-KGh" secondAttribute="centerX" id="3HV-uW-N0D"/>
+                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="leading" secondItem="ri8-Rz-KGh" secondAttribute="leading" id="HMO-dW-O1y"/>
+                                            <constraint firstAttribute="trailing" secondItem="0tj-mZ-9gh" secondAttribute="trailing" id="HdL-PH-H2o"/>
+                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="centerY" secondItem="ri8-Rz-KGh" secondAttribute="centerY" id="evx-kg-Una"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-Eq-d6I">
+                                        <rect key="frame" x="0.0" y="208.5" width="414" height="333"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19Update" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-hv-QoM">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
+                                                <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="0tn-hv-QoM" secondAttribute="bottom" id="YO7-8F-AkS"/>
+                                            <constraint firstAttribute="trailing" secondItem="0tn-hv-QoM" secondAttribute="trailing" id="cTX-Kk-8sM"/>
+                                            <constraint firstItem="0tn-hv-QoM" firstAttribute="leading" secondItem="mNL-Eq-d6I" secondAttribute="leading" id="f1c-Gu-OTq"/>
+                                            <constraint firstItem="0tn-hv-QoM" firstAttribute="top" secondItem="mNL-Eq-d6I" secondAttribute="top" id="gsW-OU-p9B"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plq-Ui-Xtv">
+                                        <rect key="frame" x="0.0" y="546.5" width="414" height="192.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-bF-Eoy">
+                                                <rect key="frame" x="98.5" y="72" width="217" height="49"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="Covid19 Update">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToCovid19UpdatePressed:" destination="Ibh-hz-156" eventType="touchUpInside" id="2Nf-K8-owp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.23237288" green="0.6128140688" blue="0.75691932439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="dMi-bF-Eoy" firstAttribute="centerY" secondItem="plq-Ui-Xtv" secondAttribute="centerY" id="81v-EX-1RM"/>
+                                            <constraint firstItem="dMi-bF-Eoy" firstAttribute="centerX" secondItem="plq-Ui-Xtv" secondAttribute="centerX" id="Lmh-5U-7qO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="bottom" secondItem="QH1-zq-ajK" secondAttribute="bottom" constant="15" id="3na-7b-BF7"/>
+                            <constraint firstItem="QH1-zq-ajK" firstAttribute="leading" secondItem="3bZ-VG-PpP" secondAttribute="leading" id="73O-5i-pI1"/>
+                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="trailing" secondItem="QH1-zq-ajK" secondAttribute="trailing" id="Txe-Xb-XV6"/>
+                            <constraint firstItem="QH1-zq-ajK" firstAttribute="top" secondItem="3bZ-VG-PpP" secondAttribute="top" constant="15" id="dJ1-Kn-Goe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3bZ-VG-PpP"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Covid19" id="K8w-Xr-f9P"/>
+                    <connections>
+                        <segue destination="r96-w0-ocv" kind="presentation" identifier="goToCovid19Update" id="srj-SX-3cZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaQ-QY-OOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.6160714285713" y="775.36231884057975"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="v77-ca-JF8">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a8y-nW-vUy" customClass="ResultViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a8y-nW-vUy" customClass="ResultViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lxV-C3-bsT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,12 +458,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhB-9s-leP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068.1159420289855" y="99.776785714285708"/>
+            <point key="canvasLocation" x="2635" y="100"/>
         </scene>
         <!--Information View Controller-->
         <scene sceneID="x2X-IZ-dm2">
             <objects>
-                <viewController storyboardIdentifier="InformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tgq-iJ-6Q7" customClass="InformationViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tgq-iJ-6Q7" customClass="InformationViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDg-A3-WYi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -487,12 +576,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAi-yg-vuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2870" y="94"/>
+            <point key="canvasLocation" x="3478" y="100"/>
         </scene>
         <!--Advice View Controller-->
         <scene sceneID="jjP-gS-E6T">
             <objects>
-                <viewController storyboardIdentifier="AdviceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yCg-OV-LHB" customClass="AdviceViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdviceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yCg-OV-LHB" customClass="AdviceViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJD-p8-o9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -736,12 +825,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2L-28-FFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="94"/>
+            <point key="canvasLocation" x="4364" y="100"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="oye-8a-eVN">
             <objects>
-                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SnB-ax-fNU" customClass="WebViewController" customModule="BMI_Calculator_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SnB-ax-fNU" customClass="WebViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i47-8i-5A1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -787,7 +876,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udm-nr-dj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4513" y="94"/>
+            <point key="canvasLocation" x="5265" y="100"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xLv-4T-Vez">
@@ -800,17 +889,207 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="arc-xD-lQE"/>
-                        <segue destination="r96-w0-ocv" kind="relationship" relationship="viewControllers" id="nYB-Ce-BcM"/>
-                        <segue destination="gfH-b7-TkU" kind="relationship" relationship="viewControllers" id="bDQ-Kz-zNI"/>
+                        <segue destination="lgo-a2-gYu" kind="relationship" relationship="viewControllers" id="PYp-TI-SFW"/>
+                        <segue destination="Ibh-hz-156" kind="relationship" relationship="viewControllers" id="qlv-zl-Xkb"/>
+                        <segue destination="5is-k6-swX" kind="relationship" relationship="viewControllers" id="WnA-VN-mlz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeX-hR-H5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="258" y="777"/>
         </scene>
+        <!--Weather-->
+        <scene sceneID="xCc-tL-ys5">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5is-k6-swX" customClass="WeatherViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Alb-wq-3Qb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2qJ-z8-9pb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okC-Zd-CSk">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Wether Info Stay Away From Viral Diseases" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-lF-CX1">
+                                                <rect key="frame" x="0.0" y="47" width="414" height="74"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerX" secondItem="okC-Zd-CSk" secondAttribute="centerX" id="GHz-JB-qZe"/>
+                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerY" secondItem="okC-Zd-CSk" secondAttribute="centerY" id="KlL-QW-G78"/>
+                                            <constraint firstAttribute="trailing" secondItem="dhs-lF-CX1" secondAttribute="trailing" id="gfe-mE-5br"/>
+                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="leading" secondItem="okC-Zd-CSk" secondAttribute="leading" id="wZ2-iJ-5Lv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-mL-h3x">
+                                        <rect key="frame" x="0.0" y="177.5" width="414" height="392"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather" translatesAutoresizingMaskIntoConstraints="NO" id="jbs-MR-cHf">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
+                                                <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="jbs-MR-cHf" firstAttribute="top" secondItem="Wxh-mL-h3x" secondAttribute="top" id="Bx5-Fb-8zK"/>
+                                            <constraint firstItem="jbs-MR-cHf" firstAttribute="leading" secondItem="Wxh-mL-h3x" secondAttribute="leading" id="SqR-rR-YPu"/>
+                                            <constraint firstAttribute="trailing" secondItem="jbs-MR-cHf" secondAttribute="trailing" id="kJO-Iw-ubl"/>
+                                            <constraint firstAttribute="bottom" secondItem="jbs-MR-cHf" secondAttribute="bottom" id="puz-rg-X2X"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-A0-vHo">
+                                        <rect key="frame" x="0.0" y="579.5" width="414" height="189.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L49-cl-MqI">
+                                                <rect key="frame" x="113" y="71" width="188" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="WeaterUpdate">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToWeatherInfo:" destination="5is-k6-swX" eventType="touchUpInside" id="rpe-Zg-NMu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="L49-cl-MqI" firstAttribute="centerY" secondItem="VHZ-A0-vHo" secondAttribute="centerY" id="RJ5-0Y-zec"/>
+                                            <constraint firstItem="L49-cl-MqI" firstAttribute="centerX" secondItem="VHZ-A0-vHo" secondAttribute="centerX" id="io8-Kj-9mQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="okC-Zd-CSk" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="2mx-mx-UK4"/>
+                                    <constraint firstItem="VHZ-A0-vHo" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="4BR-pP-Keb"/>
+                                    <constraint firstItem="Wxh-mL-h3x" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="9iB-G0-0EX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wxh-mL-h3x" secondAttribute="trailing" id="Trz-jK-GDs"/>
+                                    <constraint firstAttribute="trailing" secondItem="okC-Zd-CSk" secondAttribute="trailing" id="jwn-wr-eup"/>
+                                    <constraint firstAttribute="trailing" secondItem="VHZ-A0-vHo" secondAttribute="trailing" id="vV4-RA-qsU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2qJ-z8-9pb" firstAttribute="top" secondItem="mLc-1V-6fJ" secondAttribute="top" id="HD9-v5-W4B"/>
+                            <constraint firstItem="2qJ-z8-9pb" firstAttribute="leading" secondItem="mLc-1V-6fJ" secondAttribute="leading" id="TkT-wI-Omf"/>
+                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="trailing" secondItem="2qJ-z8-9pb" secondAttribute="trailing" id="hPD-wD-a1C"/>
+                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="bottom" secondItem="2qJ-z8-9pb" secondAttribute="bottom" id="wAD-rL-gdw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mLc-1V-6fJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Weather" id="rTs-r7-a4J"/>
+                    <connections>
+                        <segue destination="gfH-b7-TkU" kind="presentation" identifier="goToWeatherInfo" id="5c9-zK-EQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0Y-8Q-bcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="1538.8392857142856"/>
+        </scene>
+        <!--BMI-->
+        <scene sceneID="yV1-6t-wEZ">
+            <objects>
+                <viewController storyboardIdentifier="BMIViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lgo-a2-gYu" customClass="BMIViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5A-Fw-MoY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="16l-su-rY1">
+                                <rect key="frame" x="0.0" y="62" width="414" height="735"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Dr-Gk-6KZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator To Measure Our Health Conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYF-SB-URa">
+                                                <rect key="frame" x="0.0" y="47" width="414" height="72"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="EYF-SB-URa" firstAttribute="leading" secondItem="8Dr-Gk-6KZ" secondAttribute="leading" id="8Hc-2Z-alM"/>
+                                            <constraint firstAttribute="trailing" secondItem="EYF-SB-URa" secondAttribute="trailing" id="Va8-y3-Vj6"/>
+                                            <constraint firstItem="EYF-SB-URa" firstAttribute="centerY" secondItem="8Dr-Gk-6KZ" secondAttribute="centerY" id="Zhp-DD-Uxr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qED-l0-olM">
+                                        <rect key="frame" x="0.0" y="186" width="414" height="308"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMICalculator" translatesAutoresizingMaskIntoConstraints="NO" id="cJd-bG-tfW">
+                                                <rect key="frame" x="-93" y="0.0" width="600" height="308"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="cJd-bG-tfW" firstAttribute="top" secondItem="qED-l0-olM" secondAttribute="top" id="ZI8-sz-h9S"/>
+                                            <constraint firstItem="cJd-bG-tfW" firstAttribute="centerX" secondItem="qED-l0-olM" secondAttribute="centerX" id="Zaw-tK-DC2"/>
+                                            <constraint firstAttribute="bottom" secondItem="cJd-bG-tfW" secondAttribute="bottom" id="wr7-4g-ajz"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDq-3z-7tP">
+                                        <rect key="frame" x="0.0" y="514" width="414" height="221"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNI-ah-MzB">
+                                                <rect key="frame" x="117.5" y="86.5" width="179" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Calculate BMI">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToCalculatePressed:" destination="lgo-a2-gYu" eventType="touchUpInside" id="C6F-Jb-Nuy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="bNI-ah-MzB" firstAttribute="centerY" secondItem="GDq-3z-7tP" secondAttribute="centerY" id="GB0-My-oEy"/>
+                                            <constraint firstItem="bNI-ah-MzB" firstAttribute="centerX" secondItem="GDq-3z-7tP" secondAttribute="centerX" id="LfQ-CC-MLd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8Dr-Gk-6KZ" firstAttribute="leading" secondItem="16l-su-rY1" secondAttribute="leading" id="MYk-TE-mFR"/>
+                                    <constraint firstItem="qED-l0-olM" firstAttribute="leading" secondItem="16l-su-rY1" secondAttribute="leading" id="guu-1T-lJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="qED-l0-olM" secondAttribute="trailing" id="kdr-8q-i3X"/>
+                                    <constraint firstItem="GDq-3z-7tP" firstAttribute="leading" secondItem="16l-su-rY1" secondAttribute="leading" id="lh2-wZ-cr4"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Dr-Gk-6KZ" secondAttribute="trailing" id="mcb-t3-coG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GDq-3z-7tP" secondAttribute="trailing" id="wIH-L2-8Q5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hsn-Hp-a8d" firstAttribute="bottom" secondItem="16l-su-rY1" secondAttribute="bottom" constant="16" id="0ba-u0-Oen"/>
+                            <constraint firstItem="16l-su-rY1" firstAttribute="top" secondItem="hsn-Hp-a8d" secondAttribute="top" constant="18" id="4nQ-65-OP4"/>
+                            <constraint firstItem="16l-su-rY1" firstAttribute="leading" secondItem="hsn-Hp-a8d" secondAttribute="leading" id="Lu6-1r-lRO"/>
+                            <constraint firstItem="hsn-Hp-a8d" firstAttribute="trailing" secondItem="16l-su-rY1" secondAttribute="trailing" id="ffc-Aj-Ptl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hsn-Hp-a8d"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BMI" id="77r-9R-BcA"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToCalculate" id="yJl-cg-SA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Czm-14-hxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.6160714285713" y="98.550724637681171"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="BMICalculator" width="600" height="560"/>
+        <image name="Covid19Update" width="626" height="352"/>
+        <image name="Weather" width="259" height="195"/>
         <image name="backgroundimage" width="662" height="662"/>
         <image name="calculate_background" width="375" height="812"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
