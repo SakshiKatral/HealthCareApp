@@ -67,8 +67,12 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
             resultVC?.color = bmiCalculatorBrain.getColor()
             
         }
-        
     }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 // MARK: PopOverView to get unit information
 extension CalculateViewController{
