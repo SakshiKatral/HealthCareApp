@@ -296,75 +296,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-zq-ajK">
-                                <rect key="frame" x="0.0" y="59" width="414" height="739"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-SW-E9a">
+                                <rect key="frame" x="0.0" y="64" width="414" height="729"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ri8-Rz-KGh">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="203.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLT-oe-I4V">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Covid19 to Stay Safe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tj-mZ-9gh">
-                                                <rect key="frame" x="0.0" y="65" width="414" height="74"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Covid19 To Stay Safe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nam-nV-6VF">
+                                                <rect key="frame" x="0.0" y="68.5" width="414" height="74"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="centerX" secondItem="ri8-Rz-KGh" secondAttribute="centerX" id="3HV-uW-N0D"/>
-                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="leading" secondItem="ri8-Rz-KGh" secondAttribute="leading" id="HMO-dW-O1y"/>
-                                            <constraint firstAttribute="trailing" secondItem="0tj-mZ-9gh" secondAttribute="trailing" id="HdL-PH-H2o"/>
-                                            <constraint firstItem="0tj-mZ-9gh" firstAttribute="centerY" secondItem="ri8-Rz-KGh" secondAttribute="centerY" id="evx-kg-Una"/>
+                                            <constraint firstItem="nam-nV-6VF" firstAttribute="centerX" secondItem="SLT-oe-I4V" secondAttribute="centerX" id="1pW-OL-rPe"/>
+                                            <constraint firstItem="nam-nV-6VF" firstAttribute="leading" secondItem="SLT-oe-I4V" secondAttribute="leading" id="Det-lS-d2L"/>
+                                            <constraint firstItem="nam-nV-6VF" firstAttribute="centerY" secondItem="SLT-oe-I4V" secondAttribute="centerY" id="Ice-7k-Xvh"/>
+                                            <constraint firstAttribute="trailing" secondItem="nam-nV-6VF" secondAttribute="trailing" id="X1B-oZ-Vrr"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-Eq-d6I">
-                                        <rect key="frame" x="0.0" y="208.5" width="414" height="333"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-bd-Ddd">
+                                        <rect key="frame" x="0.0" y="221" width="414" height="304.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19Update" translatesAutoresizingMaskIntoConstraints="NO" id="0tn-hv-QoM">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="333"/>
-                                                <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19Update" translatesAutoresizingMaskIntoConstraints="NO" id="fyf-iH-7xa">
+                                                <rect key="frame" x="0.0" y="5" width="414" height="352"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="0tn-hv-QoM" secondAttribute="bottom" id="YO7-8F-AkS"/>
-                                            <constraint firstAttribute="trailing" secondItem="0tn-hv-QoM" secondAttribute="trailing" id="cTX-Kk-8sM"/>
-                                            <constraint firstItem="0tn-hv-QoM" firstAttribute="leading" secondItem="mNL-Eq-d6I" secondAttribute="leading" id="f1c-Gu-OTq"/>
-                                            <constraint firstItem="0tn-hv-QoM" firstAttribute="top" secondItem="mNL-Eq-d6I" secondAttribute="top" id="gsW-OU-p9B"/>
+                                            <constraint firstItem="fyf-iH-7xa" firstAttribute="leading" secondItem="hKI-bd-Ddd" secondAttribute="leading" id="2b4-zG-JMq"/>
+                                            <constraint firstAttribute="trailing" secondItem="fyf-iH-7xa" secondAttribute="trailing" id="FuT-Hf-JjN"/>
+                                            <constraint firstAttribute="bottom" secondItem="fyf-iH-7xa" secondAttribute="bottom" constant="5" id="GDq-iJ-Nqw"/>
+                                            <constraint firstItem="fyf-iH-7xa" firstAttribute="top" secondItem="hKI-bd-Ddd" secondAttribute="top" constant="5" id="pbP-wU-bUP"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plq-Ui-Xtv">
-                                        <rect key="frame" x="0.0" y="546.5" width="414" height="192.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHk-Fz-bp3">
+                                        <rect key="frame" x="0.0" y="535.5" width="414" height="193.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-bF-Eoy">
-                                                <rect key="frame" x="98.5" y="72" width="217" height="49"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-oG-eJL">
+                                                <rect key="frame" x="98.5" y="72.5" width="217" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                                 <state key="normal" title="Covid19 Update">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="goToCovid19UpdatePressed:" destination="Ibh-hz-156" eventType="touchUpInside" id="2Nf-K8-owp"/>
-                                                </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.23237288" green="0.6128140688" blue="0.75691932439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="dMi-bF-Eoy" firstAttribute="centerY" secondItem="plq-Ui-Xtv" secondAttribute="centerY" id="81v-EX-1RM"/>
-                                            <constraint firstItem="dMi-bF-Eoy" firstAttribute="centerX" secondItem="plq-Ui-Xtv" secondAttribute="centerX" id="Lmh-5U-7qO"/>
+                                            <constraint firstItem="m2X-oG-eJL" firstAttribute="centerX" secondItem="sHk-Fz-bp3" secondAttribute="centerX" id="1IY-2o-BHS"/>
+                                            <constraint firstItem="m2X-oG-eJL" firstAttribute="centerY" secondItem="sHk-Fz-bp3" secondAttribute="centerY" id="Lhg-5l-50F"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="bottom" secondItem="QH1-zq-ajK" secondAttribute="bottom" constant="15" id="3na-7b-BF7"/>
-                            <constraint firstItem="QH1-zq-ajK" firstAttribute="leading" secondItem="3bZ-VG-PpP" secondAttribute="leading" id="73O-5i-pI1"/>
-                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="trailing" secondItem="QH1-zq-ajK" secondAttribute="trailing" id="Txe-Xb-XV6"/>
-                            <constraint firstItem="QH1-zq-ajK" firstAttribute="top" secondItem="3bZ-VG-PpP" secondAttribute="top" constant="15" id="dJ1-Kn-Goe"/>
+                            <constraint firstItem="P2a-SW-E9a" firstAttribute="leading" secondItem="3bZ-VG-PpP" secondAttribute="leading" id="Qd6-tV-byR"/>
+                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="bottom" secondItem="P2a-SW-E9a" secondAttribute="bottom" constant="20" id="SIB-h7-g8p"/>
+                            <constraint firstItem="P2a-SW-E9a" firstAttribute="top" secondItem="3bZ-VG-PpP" secondAttribute="top" constant="20" id="hGe-Sd-cMJ"/>
+                            <constraint firstItem="3bZ-VG-PpP" firstAttribute="trailing" secondItem="P2a-SW-E9a" secondAttribute="trailing" id="qu8-eR-B5m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3bZ-VG-PpP"/>
                     </view>
@@ -375,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaQ-QY-OOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038.6160714285713" y="775.36231884057975"/>
+            <point key="canvasLocation" x="1037.2767857142858" y="773.91304347826087"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="v77-ca-JF8">
@@ -906,14 +902,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2qJ-z8-9pb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ora-76-hB6">
+                                <rect key="frame" x="0.0" y="59" width="414" height="739"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okC-Zd-CSk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Wether Info Stay Away From Viral Diseases" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-lF-CX1">
-                                                <rect key="frame" x="0.0" y="47" width="414" height="74"/>
+                                                <rect key="frame" x="0.0" y="88" width="414" height="74"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -921,65 +918,58 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerX" secondItem="okC-Zd-CSk" secondAttribute="centerX" id="GHz-JB-qZe"/>
-                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerY" secondItem="okC-Zd-CSk" secondAttribute="centerY" id="KlL-QW-G78"/>
-                                            <constraint firstAttribute="trailing" secondItem="dhs-lF-CX1" secondAttribute="trailing" id="gfe-mE-5br"/>
+                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerY" secondItem="okC-Zd-CSk" secondAttribute="centerY" id="BZf-YH-38J"/>
+                                            <constraint firstAttribute="trailing" secondItem="dhs-lF-CX1" secondAttribute="trailing" id="LCe-Nb-9d6"/>
+                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerX" secondItem="okC-Zd-CSk" secondAttribute="centerX" id="TLx-aF-3Xn"/>
                                             <constraint firstItem="dhs-lF-CX1" firstAttribute="leading" secondItem="okC-Zd-CSk" secondAttribute="leading" id="wZ2-iJ-5Lv"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-mL-h3x">
-                                        <rect key="frame" x="0.0" y="177.5" width="414" height="392"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-A0-vHo">
+                                        <rect key="frame" x="0.0" y="259.5" width="414" height="259"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather" translatesAutoresizingMaskIntoConstraints="NO" id="jbs-MR-cHf">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="392"/>
-                                                <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather" translatesAutoresizingMaskIntoConstraints="NO" id="s28-9G-7Nj">
+                                                <rect key="frame" x="0.0" y="5" width="414" height="195"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="jbs-MR-cHf" firstAttribute="top" secondItem="Wxh-mL-h3x" secondAttribute="top" id="Bx5-Fb-8zK"/>
-                                            <constraint firstItem="jbs-MR-cHf" firstAttribute="leading" secondItem="Wxh-mL-h3x" secondAttribute="leading" id="SqR-rR-YPu"/>
-                                            <constraint firstAttribute="trailing" secondItem="jbs-MR-cHf" secondAttribute="trailing" id="kJO-Iw-ubl"/>
-                                            <constraint firstAttribute="bottom" secondItem="jbs-MR-cHf" secondAttribute="bottom" id="puz-rg-X2X"/>
+                                            <constraint firstAttribute="trailing" secondItem="s28-9G-7Nj" secondAttribute="trailing" id="58R-TG-Zl7"/>
+                                            <constraint firstAttribute="bottom" secondItem="s28-9G-7Nj" secondAttribute="bottom" id="5L1-IN-ARf"/>
+                                            <constraint firstAttribute="bottom" secondItem="s28-9G-7Nj" secondAttribute="bottom" constant="5" id="dxX-Up-9lO"/>
+                                            <constraint firstItem="s28-9G-7Nj" firstAttribute="top" secondItem="VHZ-A0-vHo" secondAttribute="top" constant="5" id="ndo-aJ-A4b"/>
+                                            <constraint firstItem="s28-9G-7Nj" firstAttribute="leading" secondItem="VHZ-A0-vHo" secondAttribute="leading" id="oF5-sQ-STv"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-A0-vHo">
-                                        <rect key="frame" x="0.0" y="579.5" width="414" height="189.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-mL-h3x">
+                                        <rect key="frame" x="0.0" y="528.5" width="414" height="210.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L49-cl-MqI">
-                                                <rect key="frame" x="113" y="71" width="188" height="48"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-V4-kud">
+                                                <rect key="frame" x="113" y="81.5" width="188" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="WeaterUpdate">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="goToWeatherInfo:" destination="5is-k6-swX" eventType="touchUpInside" id="rpe-Zg-NMu"/>
+                                                    <action selector="goToWeatherInfo:" destination="5is-k6-swX" eventType="touchUpInside" id="pgz-Ih-SRz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="L49-cl-MqI" firstAttribute="centerY" secondItem="VHZ-A0-vHo" secondAttribute="centerY" id="RJ5-0Y-zec"/>
-                                            <constraint firstItem="L49-cl-MqI" firstAttribute="centerX" secondItem="VHZ-A0-vHo" secondAttribute="centerX" id="io8-Kj-9mQ"/>
+                                            <constraint firstItem="Oui-V4-kud" firstAttribute="centerX" secondItem="Wxh-mL-h3x" secondAttribute="centerX" id="FHY-My-jGD"/>
+                                            <constraint firstItem="Oui-V4-kud" firstAttribute="centerY" secondItem="Wxh-mL-h3x" secondAttribute="centerY" id="bJd-Op-Lmb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="okC-Zd-CSk" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="2mx-mx-UK4"/>
-                                    <constraint firstItem="VHZ-A0-vHo" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="4BR-pP-Keb"/>
-                                    <constraint firstItem="Wxh-mL-h3x" firstAttribute="leading" secondItem="2qJ-z8-9pb" secondAttribute="leading" id="9iB-G0-0EX"/>
-                                    <constraint firstAttribute="trailing" secondItem="Wxh-mL-h3x" secondAttribute="trailing" id="Trz-jK-GDs"/>
-                                    <constraint firstAttribute="trailing" secondItem="okC-Zd-CSk" secondAttribute="trailing" id="jwn-wr-eup"/>
-                                    <constraint firstAttribute="trailing" secondItem="VHZ-A0-vHo" secondAttribute="trailing" id="vV4-RA-qsU"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2qJ-z8-9pb" firstAttribute="top" secondItem="mLc-1V-6fJ" secondAttribute="top" id="HD9-v5-W4B"/>
-                            <constraint firstItem="2qJ-z8-9pb" firstAttribute="leading" secondItem="mLc-1V-6fJ" secondAttribute="leading" id="TkT-wI-Omf"/>
-                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="trailing" secondItem="2qJ-z8-9pb" secondAttribute="trailing" id="hPD-wD-a1C"/>
-                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="bottom" secondItem="2qJ-z8-9pb" secondAttribute="bottom" id="wAD-rL-gdw"/>
+                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="bottom" secondItem="Ora-76-hB6" secondAttribute="bottom" constant="15" id="G4Z-XJ-8Y4"/>
+                            <constraint firstItem="Ora-76-hB6" firstAttribute="top" secondItem="mLc-1V-6fJ" secondAttribute="top" constant="15" id="MsQ-jm-XW6"/>
+                            <constraint firstAttribute="trailing" secondItem="Ora-76-hB6" secondAttribute="trailing" id="nUN-f9-vBp"/>
+                            <constraint firstItem="Ora-76-hB6" firstAttribute="leading" secondItem="mLc-1V-6fJ" secondAttribute="leading" id="rMv-R1-9ou"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mLc-1V-6fJ"/>
                     </view>
@@ -990,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0Y-8Q-bcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="1538.8392857142856"/>
+            <point key="canvasLocation" x="1037.68115942029" y="1537.5"/>
         </scene>
         <!--BMI-->
         <scene sceneID="yV1-6t-wEZ">
