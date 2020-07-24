@@ -9,11 +9,15 @@
 import UIKit
 
 class WeatherInformationViewController: UIViewController, UITextFieldDelegate {
+
+//MARK: - Variable declaration
     @IBOutlet weak var searchTextField : UITextField!
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    var weatherManager = WeatherManager()
     
+//MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTextField.delegate = self
@@ -22,6 +26,7 @@ class WeatherInformationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func searchButtonPressed(_ sender: UIButton){
         searchTextField.endEditing(true)
+        
     }
 // MARK: UITextField delegate Methods
     
@@ -42,7 +47,16 @@ class WeatherInformationViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        // Use searchTextField.text to get the weather for that city
+        if let city = searchTextField.text {
+            weatherManager.fetchWeatherURL(cityName: city)
+        }
+        
         searchTextField.text = ""
+    }
+    
+    
+    @IBAction func pressed(_ sender: UIButton){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BaseViewController") as! BaseViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

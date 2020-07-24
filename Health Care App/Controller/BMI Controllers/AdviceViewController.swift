@@ -12,6 +12,7 @@ import WebKit
 
 class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WKNavigationDelegate {
     
+    //MARK: - Variable declaration
     @IBOutlet weak var effectURLLink : UIButton!
     @IBOutlet weak var yogaVideo1URLLink : UIButton!
     @IBOutlet weak var yogaVideo2URLLink : UIButton!
@@ -19,12 +20,12 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
     @IBOutlet weak var exerciseVideo2URLLink : UIButton!
     @IBOutlet weak var dietPlanVideo1URLLink : UIButton!
     @IBOutlet weak var dietPlanVideo2URLLink : UIButton!
-    
-    
     var catagory = ""
     var advice : Advice?
     var adviceBrain = AdviceBrain()
     var url = ""
+    
+    //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
         advice = adviceBrain.getURLLinks(catagory: catagory)
@@ -37,6 +38,7 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
         dietPlanVideo2URLLink.setTitle(advice?.dietPlanVideo[1], for: .normal)
         
     }
+    //MARK: - Navigation
     @IBAction func hitURLPressed(_ sender: UIButton){
         url = sender.currentTitle ?? ""
         showSimpleActionSheet(url: url)

@@ -9,18 +9,21 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    
+    //MARK: - Variable declaration
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     var bmiValue : String?
     var advice : String?
     var color : UIColor?
+    
+    //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
         resultLabel.text = bmiValue
         adviceLabel.text = advice
         view.backgroundColor = color
     }
+    //MARK: - Navigation
     @IBAction func reCalculatePressed(_ sender: UIButton){
         self.dismiss(animated: true, completion: nil)
     }

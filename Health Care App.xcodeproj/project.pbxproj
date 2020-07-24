@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040B875D24C6FBAA000BA05D /* Country Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B875C24C6FBAA000BA05D /* Country Model.swift */; };
+		040B875F24C6FBF3000BA05D /* Country Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B875E24C6FBF3000BA05D /* Country Data Manager.swift */; };
+		040B876124C710E2000BA05D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B876024C710E2000BA05D /* BaseViewController.swift */; };
 		041E8E8D24BB64E800225DEE /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E8E8C24BB64E800225DEE /* BMI.swift */; };
 		0422249E24BB0593002555FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422249D24BB0593002555FE /* AppDelegate.swift */; };
 		042224A024BB0593002555FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422249F24BB0593002555FE /* SceneDelegate.swift */; };
@@ -20,8 +23,19 @@
 		04241DEB24BF143D001477B2 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEA24BF143D001477B2 /* Advice.swift */; };
 		04241DED24BF1462001477B2 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEC24BF1462001477B2 /* Information.swift */; };
 		04241DEF24BF1B49001477B2 /* InformationBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEE24BF1B48001477B2 /* InformationBrain.swift */; };
+		042C689124CAE6A80083A495 /* Base Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689024CAE6A80083A495 /* Base Class.swift */; };
+		042C689924CAF50A0083A495 /* Rain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689224CAF5090083A495 /* Rain.swift */; };
+		042C689A24CAF50A0083A495 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689624CAF50A0083A495 /* Main.swift */; };
+		042C689B24CAF50A0083A495 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689724CAF50A0083A495 /* Coord.swift */; };
+		042C689C24CAF50A0083A495 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689324CAF5090083A495 /* Wind.swift */; };
+		042C689D24CAF50A0083A495 /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689424CAF5090083A495 /* Sys.swift */; };
+		042C689E24CAF50A0083A495 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689524CAF5090083A495 /* Clouds.swift */; };
+		042C689F24CAF50A0083A495 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689824CAF50A0083A495 /* Weather.swift */; };
+		042C68A124CAF8900083A495 /* Weather Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68A024CAF8900083A495 /* Weather Model.swift */; };
+		042C68C524CB01830083A495 /* UpdatedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */; };
 		04393AF124C1845E00C76FAF /* Covid19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF024C1845E00C76FAF /* Covid19ViewController.swift */; };
 		04393AF424C1848300C76FAF /* WeatherInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */; };
+		0449FF2224C8640F0010C1FB /* Country List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449FF2124C8640F0010C1FB /* Country List.swift */; };
 		046BD92F24C2C78700585D8C /* Weather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92C24C2C78600585D8C /* Weather.jpg */; };
 		046BD93024C2C78700585D8C /* BMICalculator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92D24C2C78700585D8C /* BMICalculator.jpg */; };
 		046BD93124C2C78700585D8C /* Covid19Update.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92E24C2C78700585D8C /* Covid19Update.jpg */; };
@@ -31,9 +45,15 @@
 		046C2B9924C02E36007ADFAC /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C2B9824C02E36007ADFAC /* AdviceViewController.swift */; };
 		046C2BBB24C0852C007ADFAC /* AdviceBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C2BBA24C0852C007ADFAC /* AdviceBrain.swift */; };
 		046C2BBD24C0B0C3007ADFAC /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C2BBC24C0B0C3007ADFAC /* WebViewController.swift */; };
+		04ED1B5224C9A12100EC154D /* Country List Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED1B5124C9A12100EC154D /* Country List Manager.swift */; };
+		04ED1B5424C9A6AA00EC154D /* CounrtyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */; };
+		04FCA09724C5E54400F0565B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA09624C5E54400F0565B /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040B875C24C6FBAA000BA05D /* Country Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Model.swift"; sourceTree = "<group>"; };
+		040B875E24C6FBF3000BA05D /* Country Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Data Manager.swift"; sourceTree = "<group>"; };
+		040B876024C710E2000BA05D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		041E8E8C24BB64E800225DEE /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		0422249A24BB0592002555FE /* Health Care App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Care App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0422249D24BB0593002555FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,8 +69,19 @@
 		04241DEA24BF143D001477B2 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 		04241DEC24BF1462001477B2 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		04241DEE24BF1B48001477B2 /* InformationBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBrain.swift; sourceTree = "<group>"; };
+		042C689024CAE6A80083A495 /* Base Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Base Class.swift"; sourceTree = "<group>"; };
+		042C689224CAF5090083A495 /* Rain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain.swift; sourceTree = "<group>"; };
+		042C689324CAF5090083A495 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		042C689424CAF5090083A495 /* Sys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		042C689524CAF5090083A495 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		042C689624CAF50A0083A495 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		042C689724CAF50A0083A495 /* Coord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		042C689824CAF50A0083A495 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		042C68A024CAF8900083A495 /* Weather Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Weather Model.swift"; path = "../../../../Weather Model.swift"; sourceTree = "<group>"; };
+		042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedDataTableViewController.swift; sourceTree = "<group>"; };
 		04393AF024C1845E00C76FAF /* Covid19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19ViewController.swift; sourceTree = "<group>"; };
 		04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformationViewController.swift; sourceTree = "<group>"; };
+		0449FF2124C8640F0010C1FB /* Country List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country List.swift"; sourceTree = "<group>"; };
 		046BD92C24C2C78600585D8C /* Weather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Weather.jpg; path = ../../Udemy/Weather.jpg; sourceTree = "<group>"; };
 		046BD92D24C2C78700585D8C /* BMICalculator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BMICalculator.jpg; path = ../../Udemy/BMICalculator.jpg; sourceTree = "<group>"; };
 		046BD92E24C2C78700585D8C /* Covid19Update.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Covid19Update.jpg; path = ../../Udemy/Covid19Update.jpg; sourceTree = "<group>"; };
@@ -60,6 +91,9 @@
 		046C2B9824C02E36007ADFAC /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
 		046C2BBA24C0852C007ADFAC /* AdviceBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceBrain.swift; sourceTree = "<group>"; };
 		046C2BBC24C0B0C3007ADFAC /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		04ED1B5124C9A12100EC154D /* Country List Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country List Manager.swift"; sourceTree = "<group>"; };
+		04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyListTableViewController.swift; sourceTree = "<group>"; };
+		04FCA09624C5E54400F0565B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +155,8 @@
 				04393AEE24C1827600C76FAF /* BMI Controllers */,
 				04393AEF24C1843300C76FAF /* Covid19 Controllers */,
 				04393AF224C1846A00C76FAF /* Weather Controllers */,
+				040B876024C710E2000BA05D /* BaseViewController.swift */,
+				042C689024CAE6A80083A495 /* Base Class.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				04393AF024C1845E00C76FAF /* Covid19ViewController.swift */,
+				04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */,
+				042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */,
 				046BD93224C2C98200585D8C /* Covid19UpdateViewController.swift */,
 			);
 			path = "Covid19 Controllers";
@@ -208,6 +246,8 @@
 		046BD92624C2B1B400585D8C /* Covid19 Model */ = {
 			isa = PBXGroup;
 			children = (
+				040B875C24C6FBAA000BA05D /* Country Model.swift */,
+				0449FF2124C8640F0010C1FB /* Country List.swift */,
 			);
 			path = "Covid19 Model";
 			sourceTree = "<group>";
@@ -215,6 +255,14 @@
 		046BD92724C2B1DC00585D8C /* Weather Model */ = {
 			isa = PBXGroup;
 			children = (
+				042C68A024CAF8900083A495 /* Weather Model.swift */,
+				042C689724CAF50A0083A495 /* Coord.swift */,
+				042C689524CAF5090083A495 /* Clouds.swift */,
+				042C689624CAF50A0083A495 /* Main.swift */,
+				042C689224CAF5090083A495 /* Rain.swift */,
+				042C689424CAF5090083A495 /* Sys.swift */,
+				042C689824CAF50A0083A495 /* Weather.swift */,
+				042C689324CAF5090083A495 /* Wind.swift */,
 			);
 			path = "Weather Model";
 			sourceTree = "<group>";
@@ -222,6 +270,8 @@
 		046BD92824C2B1EB00585D8C /* Covid19 ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04ED1B5124C9A12100EC154D /* Country List Manager.swift */,
+				040B875E24C6FBF3000BA05D /* Country Data Manager.swift */,
 			);
 			path = "Covid19 ViewModel";
 			sourceTree = "<group>";
@@ -229,6 +279,7 @@
 		046BD92924C2B1FD00585D8C /* Weather ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				04FCA09624C5E54400F0565B /* WeatherManager.swift */,
 			);
 			path = "Weather ViewModel";
 			sourceTree = "<group>";
@@ -307,21 +358,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042C689F24CAF50A0083A495 /* Weather.swift in Sources */,
+				042C68A124CAF8900083A495 /* Weather Model.swift in Sources */,
+				04ED1B5224C9A12100EC154D /* Country List Manager.swift in Sources */,
+				042C689C24CAF50A0083A495 /* Wind.swift in Sources */,
 				042224B924BB344D002555FE /* ResultViewController.swift in Sources */,
 				046BD93724C2D81700585D8C /* BMIViewController.swift in Sources */,
 				04393AF424C1848300C76FAF /* WeatherInformationViewController.swift in Sources */,
 				042224A224BB0593002555FE /* CalculateViewController.swift in Sources */,
+				040B876124C710E2000BA05D /* BaseViewController.swift in Sources */,
+				042C689B24CAF50A0083A495 /* Coord.swift in Sources */,
+				042C689E24CAF50A0083A495 /* Clouds.swift in Sources */,
 				04241DEB24BF143D001477B2 /* Advice.swift in Sources */,
+				042C689924CAF50A0083A495 /* Rain.swift in Sources */,
+				040B875F24C6FBF3000BA05D /* Country Data Manager.swift in Sources */,
+				0449FF2224C8640F0010C1FB /* Country List.swift in Sources */,
 				0422249E24BB0593002555FE /* AppDelegate.swift in Sources */,
 				04393AF124C1845E00C76FAF /* Covid19ViewController.swift in Sources */,
 				046C2B9924C02E36007ADFAC /* AdviceViewController.swift in Sources */,
+				040B875D24C6FBAA000BA05D /* Country Model.swift in Sources */,
 				046BD93324C2C98200585D8C /* Covid19UpdateViewController.swift in Sources */,
+				042C689A24CAF50A0083A495 /* Main.swift in Sources */,
 				04241DE924BEE2F1001477B2 /* BMICalctatorBrain.swift in Sources */,
 				04241DE624BEC2BD001477B2 /* InformationViewController.swift in Sources */,
+				042C689124CAE6A80083A495 /* Base Class.swift in Sources */,
 				04241DEF24BF1B49001477B2 /* InformationBrain.swift in Sources */,
 				046C2BBD24C0B0C3007ADFAC /* WebViewController.swift in Sources */,
+				042C68C524CB01830083A495 /* UpdatedDataTableViewController.swift in Sources */,
 				046C2BBB24C0852C007ADFAC /* AdviceBrain.swift in Sources */,
 				046BD93524C2C9E100585D8C /* WeatherViewController.swift in Sources */,
+				04FCA09724C5E54400F0565B /* WeatherManager.swift in Sources */,
+				042C689D24CAF50A0083A495 /* Sys.swift in Sources */,
+				04ED1B5424C9A6AA00EC154D /* CounrtyListTableViewController.swift in Sources */,
 				041E8E8D24BB64E800225DEE /* BMI.swift in Sources */,
 				04241DED24BF1462001477B2 /* Information.swift in Sources */,
 				042224A024BB0593002555FE /* SceneDelegate.swift in Sources */,
@@ -470,6 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Health Care App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Health Care App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,12 +10,15 @@ import UIKit
 
 class InformationViewController: UIViewController {
     
+    //MARK: - Variable declaration
     @IBOutlet weak var referenceImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     var catagory = ""
     var informationBrain = InformationBrain()
     var data : Information?
+    
+    //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
         data = informationBrain.getData(catagory: catagory)
@@ -23,6 +26,8 @@ class InformationViewController: UIViewController {
         titleLabel.text = data?.catagory ?? ""
         descriptionLabel.text = data?.details ?? ""
     }
+    
+    //MARK: - Navigation
     @IBAction func clickForAdvicePresssed(_ sender: UIButton){
         self.performSegue(withIdentifier: "goToAdvice", sender: self)
     }

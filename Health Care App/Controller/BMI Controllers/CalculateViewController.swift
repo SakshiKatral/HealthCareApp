@@ -9,18 +9,18 @@
 import UIKit
 
 class CalculateViewController: UIViewController, UIPopoverPresentationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
-    
+    //MARK: - Variable declaration
     @IBOutlet weak var weightSlider : UISlider!
     @IBOutlet weak var heightSlider : UISlider!
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var heightButton: UIButton!
-    
-    
     var info = ""
     let popoverView = UIView()
     let infoPicker = UIPickerView()
     var bmiCalculatorBrain = BMICalculatorBrain()
+    
+    //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
         infoPicker.dataSource = self
@@ -28,11 +28,28 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
         infoPicker.backgroundColor = .systemIndigo
     }
     
-    //MARK: BMI calculation
+    //MARK: - BMI calculation
     @IBAction func weightHeightSliderChanged(_ sender: UISlider){
         
         if sender == heightSlider{
-            heightLabel.text = String(format: "%.2f", sender.value)
+            
+            let unit = heightButton.currentTitle ?? ""
+            if unit == "centimeter"{
+                heightLabel.text = String(format: "%.0f", sender.value)
+                heightSlider.maximumValue = 300
+            }
+            else if unit == "feet"{
+                heightLabel.text = String(format: "%.2f", sender.value)
+                heightSlider.maximumValue = 15
+            }
+            else if unit == "inch"{
+                heightLabel.text = String(format: "%.0f", sender.value)
+                heightSlider.maximumValue = 200
+            }
+            else{
+                heightLabel.text = String(format: "%.2f", sender.value)
+                heightSlider.maximumValue = 5
+            }
         }
         else if sender == weightSlider{
             weightLabel.text = String(format: "%.0f", sender.value)
@@ -43,20 +60,13 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
         let height = heightSlider.value
         let weight = weightSlider.value
         let unit = heightButton.currentTitle ?? ""
-        if unit == "centimeter"{
-            heightSlider.maximumValue = 500
-        }
-        else if unit == "feet"{
-            heightSlider.maximumValue = 15
-        }
-        else if unit == "inch"{
-            heightSlider.maximumValue = 200
-        }
-        else{
-            heightSlider.maximumValue = 5
-        }
-        bmiCalculatorBrain.calculateBmi(height: height, weight: weight, unit: unit)
         
+        bmiCalculatorBrain.calculateBmi(height: height, weight: weight, unit: unit)
+        navigationToNext()
+        
+    }
+    //MARK: - Navigation
+    func navigationToNext()  {
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,8 +84,9 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
     }
     
 }
-// MARK: PopOverView to get unit information
+
 extension CalculateViewController{
+    // MARK: - PopOverView to get unit information
     @IBAction func showPicker(_ sender: UIButton) {
         
         
@@ -95,20 +106,20 @@ extension CalculateViewController{
         
     }
 }
-//MARK: PickerView Delegate methos
+
 extension CalculateViewController{
-    
+    //MARK: - PickerView data source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return bmiCalculatorBrain.heightarray.count
+        return bmiCalculatorBrain.heightarray.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return bmiCalculatorBrain.heightarray[row]
+        return bmiCalculatorBrain.heightarray[row]
     }
-    
+    //MARK: - PickerView Delegate
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let row = infoPicker.selectedRow(inComponent: 0)
         heightButton.setTitle(bmiCalculatorBrain.heightarray[row], for: .normal)

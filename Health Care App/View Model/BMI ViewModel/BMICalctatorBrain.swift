@@ -12,11 +12,11 @@ struct BMICalculatorBrain {
     var bmi : BMI?
     
     var infoArray = ["Female", "Male"]
-    var heightarray = ["feet", "meter", "cenimeter", "inch"]
+    var heightarray = ["feet", "meter", "centimeter", "inch"]
     
     mutating func calculateBmi(height: Float, weight: Float, unit: String) {
         var heightInMeter :Float = 0.0
-        if unit == "cenimeter"{
+        if unit == "centimeter"{
             heightInMeter = height / 100
         }
         else if unit == "feet"{

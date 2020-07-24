@@ -10,13 +10,16 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
+//MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+//MARK: - Navigation
     @IBAction func goToWeatherInfo(_ sender: UIButton){
-        self.performSegue(withIdentifier: "goToWeatherInfo", sender: self)
+        guard let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "WeatherInformationViewController") as? WeatherInformationViewController else { return }
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
+

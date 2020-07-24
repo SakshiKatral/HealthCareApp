@@ -9,22 +9,21 @@
 import UIKit
 
 class Covid19UpdateViewController: UIViewController {
-
+    
+    //MARK: - Variable declaration
+    @IBOutlet weak var tableview : UITableView!
+    var countryDataManager = CountryDataManager()
+    var countryName = ""
+    
+    //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        print(countryName)
+        countryDataManager.getCountryName(country: countryName)
+        countryDataManager.performURLRequest()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    //MARK: - Navigation
 }
+

@@ -8,19 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weather-->
+        <!--Weather Information View Controller-->
         <scene sceneID="d2c-SP-eP4">
             <objects>
                 <viewController storyboardIdentifier="WeatherInformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfH-b7-TkU" customClass="WeatherInformationViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUp-EP-7gu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundimage" translatesAutoresizingMaskIntoConstraints="NO" id="jNM-qn-fZf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-Sh-Z3L">
-                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-Sh-Z3L" userLabel="Stack View outer">
+                                <rect key="frame" x="20" y="59" width="374" height="803"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MFE-Mc-JS7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -88,7 +88,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-ow-6Kk">
-                                        <rect key="frame" x="134" y="355.5" width="240" height="452.5"/>
+                                        <rect key="frame" x="134" y="355.5" width="240" height="447.5"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -101,7 +101,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="jNM-qn-fZf" secondAttribute="bottom" id="1Qk-AD-w3Q"/>
                             <constraint firstAttribute="trailing" secondItem="jNM-qn-fZf" secondAttribute="trailing" id="3p5-xO-9yz"/>
-                            <constraint firstItem="9l4-Sh-Z3L" firstAttribute="top" secondItem="02T-N7-lOO" secondAttribute="top" id="b4O-Yr-lEp"/>
+                            <constraint firstItem="9l4-Sh-Z3L" firstAttribute="top" secondItem="02T-N7-lOO" secondAttribute="top" constant="15" id="b4O-Yr-lEp"/>
                             <constraint firstItem="9l4-Sh-Z3L" firstAttribute="leading" secondItem="AUp-EP-7gu" secondAttribute="leading" constant="20" id="dMS-uK-0fp"/>
                             <constraint firstItem="02T-N7-lOO" firstAttribute="trailing" secondItem="9l4-Sh-Z3L" secondAttribute="trailing" constant="20" id="hIw-3P-Ok5"/>
                             <constraint firstItem="jNM-qn-fZf" firstAttribute="leading" secondItem="AUp-EP-7gu" secondAttribute="leading" id="hOL-i3-2bq"/>
@@ -110,7 +110,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="02T-N7-lOO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather" id="pOp-GD-0HB"/>
                     <connections>
                         <outlet property="cityLabel" destination="53u-m7-Pcf" id="hmk-Lc-Sid"/>
                         <outlet property="conditionImageView" destination="41i-8g-XQ2" id="vwK-S4-64r"/>
@@ -120,7 +119,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZG-Ug-Ba9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848" y="1539"/>
+            <point key="canvasLocation" x="2757.971014492754" y="1577.6785714285713"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="Wi3-O9-t5j">
+            <objects>
+                <viewController storyboardIdentifier="BaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2YA-Uo-yvP" customClass="BaseViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u8E-yd-T9b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nNH-dC-tpR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Atd-Xb-4DL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3442" y="1568"/>
         </scene>
         <!--BMI-->
         <scene sceneID="tne-QT-ifu">
@@ -294,7 +308,7 @@
             <objects>
                 <viewController storyboardIdentifier="Covid19UpdateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r96-w0-ocv" customClass="Covid19UpdateViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sqJ-Xc-qhH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="13e-HC-N5d"/>
@@ -303,9 +317,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d32-sE-KpT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848" y="777"/>
+            <point key="canvasLocation" x="5243" y="829"/>
         </scene>
-        <!--Covid19-->
+        <!--Covid19 View Controller-->
         <scene sceneID="JJE-zY-xCe">
             <objects>
                 <viewController storyboardIdentifier="Covid19ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ibh-hz-156" customClass="Covid19ViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -314,13 +328,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-SW-E9a">
-                                <rect key="frame" x="0.0" y="64" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="685"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLT-oe-I4V">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="236.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="221.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More About Covid19 To Stay Safe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nam-nV-6VF">
-                                                <rect key="frame" x="0.0" y="81" width="414" height="74"/>
+                                                <rect key="frame" x="0.0" y="74" width="414" height="74"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -335,10 +349,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-bd-Ddd">
-                                        <rect key="frame" x="0.0" y="246.5" width="414" height="236"/>
+                                        <rect key="frame" x="0.0" y="231.5" width="414" height="222"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Covid19Update" translatesAutoresizingMaskIntoConstraints="NO" id="fyf-iH-7xa">
-                                                <rect key="frame" x="0.0" y="5" width="414" height="226"/>
+                                                <rect key="frame" x="0.0" y="5" width="414" height="212"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,15 +364,18 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHk-Fz-bp3">
-                                        <rect key="frame" x="0.0" y="492.5" width="414" height="236.5"/>
+                                        <rect key="frame" x="0.0" y="463.5" width="414" height="221.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2X-oG-eJL">
-                                                <rect key="frame" x="98.5" y="94" width="217" height="49"/>
+                                                <rect key="frame" x="98.5" y="86" width="217" height="49"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
                                                 <state key="normal" title="Covid19 Update">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goToCovid19UpdatePressed:" destination="Ibh-hz-156" eventType="touchUpInside" id="YIe-pN-gRC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -380,14 +397,77 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3bZ-VG-PpP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Covid19" id="K8w-Xr-f9P"/>
-                    <connections>
-                        <segue destination="r96-w0-ocv" kind="presentation" identifier="goToCovid19Update" id="srj-SX-3cZ"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="o3I-CM-8Nv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaQ-QY-OOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037.2767857142858" y="773.91304347826087"/>
+            <point key="canvasLocation" x="1812" y="773"/>
+        </scene>
+        <!--Counrty List Table View Controller-->
+        <scene sceneID="4nk-7Q-cco">
+            <objects>
+                <tableViewController storyboardIdentifier="CounrtyListTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JcY-E0-gfy" customClass="CounrtyListTableViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" springLoaded="YES" id="bo7-C5-8nK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Qle-rq-137" style="IBUITableViewCellStyleDefault" id="HX4-qv-by2">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="47.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HX4-qv-by2" id="MbE-5u-iVD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qle-rq-137">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.50980392156862742" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JcY-E0-gfy" id="dDx-fz-P6U"/>
+                            <outlet property="delegate" destination="JcY-E0-gfy" id="DVK-px-cRu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXW-T8-CZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634.7826086956525" y="772.76785714285711"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="QkH-2Z-pxI">
+            <objects>
+                <tableViewController id="rJL-s6-yUt" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sT5-yt-A4V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="siA-P7-C89">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="siA-P7-C89" id="jYq-Yi-49z">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rJL-s6-yUt" id="2iE-lI-D3Y"/>
+                            <outlet property="delegate" destination="rJL-s6-yUt" id="LFW-0T-dBj"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnO-a7-2qM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3441" y="777"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="v77-ca-JF8">
@@ -491,13 +571,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zjW-Mg-80v">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculate_background" translatesAutoresizingMaskIntoConstraints="NO" id="Bg0-eD-C2k">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ObsesWeight" translatesAutoresizingMaskIntoConstraints="NO" id="Bg0-eD-C2k">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="438"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="100" id="sPo-Cn-7q8"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sge-7U-p4A">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obses Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sge-7U-p4A">
                                         <rect key="frame" x="0.0" y="443" width="414" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CM6-sB-uCi"/>
@@ -506,7 +586,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-ae-Evr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-ae-Evr">
                                         <rect key="frame" x="0.0" y="498" width="414" height="220"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="220" id="E5T-EQ-s6M"/>
@@ -894,6 +974,95 @@
             </objects>
             <point key="canvasLocation" x="5265" y="100"/>
         </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="2vW-6t-8k4">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nD3-Rm-A1J" customClass="WeatherViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nj1-s4-xW8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nCn-bu-weP">
+                                <rect key="frame" x="0.0" y="103" width="414" height="695"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEd-LW-KAb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="225"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Wether Info Stay Away From Viral Diseases" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLv-dX-D5i">
+                                                <rect key="frame" x="0.0" y="76.5" width="414" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235289999999" green="0.62745098040000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="sLv-dX-D5i" firstAttribute="centerY" secondItem="zEd-LW-KAb" secondAttribute="centerY" id="Div-de-qzo"/>
+                                            <constraint firstAttribute="trailing" secondItem="sLv-dX-D5i" secondAttribute="trailing" id="OKf-EO-iph"/>
+                                            <constraint firstItem="sLv-dX-D5i" firstAttribute="leading" secondItem="zEd-LW-KAb" secondAttribute="leading" id="zhn-QJ-2tr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQL-Q3-GM2">
+                                        <rect key="frame" x="0.0" y="235" width="414" height="225"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather" translatesAutoresizingMaskIntoConstraints="NO" id="OVJ-AZ-mQX">
+                                                <rect key="frame" x="77.5" y="10" width="259" height="205"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235289999999" green="0.62745098040000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="OVJ-AZ-mQX" secondAttribute="bottom" constant="10" id="Jnh-yZ-RQT"/>
+                                            <constraint firstItem="OVJ-AZ-mQX" firstAttribute="centerX" secondItem="HQL-Q3-GM2" secondAttribute="centerX" id="Shi-ua-xcJ"/>
+                                            <constraint firstItem="OVJ-AZ-mQX" firstAttribute="centerY" secondItem="HQL-Q3-GM2" secondAttribute="centerY" id="T2Z-UE-0gO"/>
+                                            <constraint firstItem="OVJ-AZ-mQX" firstAttribute="top" secondItem="HQL-Q3-GM2" secondAttribute="top" constant="10" id="moy-yt-ewU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJM-jc-aMv">
+                                        <rect key="frame" x="0.0" y="470" width="414" height="225"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGT-Sc-DDS">
+                                                <rect key="frame" x="151" y="97.5" width="112" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Weather Update">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToWeatherInfo:" destination="nD3-Rm-A1J" eventType="touchUpInside" id="OX6-ZV-52h"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.30588235289999999" green="0.62745098040000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="OGT-Sc-DDS" firstAttribute="centerX" secondItem="PJM-jc-aMv" secondAttribute="centerX" id="n7I-Zq-SFX"/>
+                                            <constraint firstItem="OGT-Sc-DDS" firstAttribute="centerY" secondItem="PJM-jc-aMv" secondAttribute="centerY" id="o7K-zT-xoX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HQL-Q3-GM2" firstAttribute="leading" secondItem="nCn-bu-weP" secondAttribute="leading" id="NNM-Re-Yhd"/>
+                                    <constraint firstItem="PJM-jc-aMv" firstAttribute="leading" secondItem="nCn-bu-weP" secondAttribute="leading" id="U14-Uk-u9Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="zEd-LW-KAb" secondAttribute="trailing" id="aOY-28-PVW"/>
+                                    <constraint firstItem="zEd-LW-KAb" firstAttribute="leading" secondItem="nCn-bu-weP" secondAttribute="leading" id="bM2-mS-UOc"/>
+                                    <constraint firstAttribute="trailing" secondItem="PJM-jc-aMv" secondAttribute="trailing" id="xgd-6x-COB"/>
+                                    <constraint firstAttribute="trailing" secondItem="HQL-Q3-GM2" secondAttribute="trailing" id="zXk-GP-uFG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.62745098040000002" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PVB-13-HGE" firstAttribute="trailing" secondItem="nCn-bu-weP" secondAttribute="trailing" id="73l-YV-vDq"/>
+                            <constraint firstItem="nCn-bu-weP" firstAttribute="top" secondItem="PVB-13-HGE" secondAttribute="top" constant="15" id="R0Y-ac-SUt"/>
+                            <constraint firstItem="nCn-bu-weP" firstAttribute="leading" secondItem="PVB-13-HGE" secondAttribute="leading" id="ib1-ca-56F"/>
+                            <constraint firstItem="PVB-13-HGE" firstAttribute="bottom" secondItem="nCn-bu-weP" secondAttribute="bottom" constant="15" id="pp4-cZ-2qE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PVB-13-HGE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HHc-tG-VRJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXP-gE-aZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1947.826086956522" y="1577.6785714285713"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xLv-4T-Vez">
             <objects>
@@ -906,99 +1075,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="lgo-a2-gYu" kind="relationship" relationship="viewControllers" id="PYp-TI-SFW"/>
-                        <segue destination="Ibh-hz-156" kind="relationship" relationship="viewControllers" id="qlv-zl-Xkb"/>
-                        <segue destination="5is-k6-swX" kind="relationship" relationship="viewControllers" id="WnA-VN-mlz"/>
+                        <segue destination="aIu-hv-wnr" kind="relationship" relationship="viewControllers" id="qlv-zl-Xkb"/>
+                        <segue destination="05l-5f-2HZ" kind="relationship" relationship="viewControllers" id="A1U-Dp-WI5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeX-hR-H5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="258" y="777"/>
-        </scene>
-        <!--Weather-->
-        <scene sceneID="xCc-tL-ys5">
-            <objects>
-                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5is-k6-swX" customClass="WeatherViewController" customModule="Health_Care_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Alb-wq-3Qb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ora-76-hB6">
-                                <rect key="frame" x="0.0" y="59" width="414" height="739"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okC-Zd-CSk">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="239.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Wether Info Stay Away From Viral Diseases" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhs-lF-CX1">
-                                                <rect key="frame" x="0.0" y="83" width="414" height="74"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerY" secondItem="okC-Zd-CSk" secondAttribute="centerY" id="BZf-YH-38J"/>
-                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="centerX" secondItem="okC-Zd-CSk" secondAttribute="centerX" id="TLx-aF-3Xn"/>
-                                            <constraint firstItem="dhs-lF-CX1" firstAttribute="leading" secondItem="okC-Zd-CSk" secondAttribute="leading" id="wZ2-iJ-5Lv"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-A0-vHo">
-                                        <rect key="frame" x="0.0" y="249.5" width="414" height="240"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weather" translatesAutoresizingMaskIntoConstraints="NO" id="s28-9G-7Nj">
-                                                <rect key="frame" x="0.0" y="5" width="414" height="235"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="s28-9G-7Nj" secondAttribute="trailing" id="58R-TG-Zl7"/>
-                                            <constraint firstAttribute="bottom" secondItem="s28-9G-7Nj" secondAttribute="bottom" id="5L1-IN-ARf"/>
-                                            <constraint firstItem="s28-9G-7Nj" firstAttribute="top" secondItem="VHZ-A0-vHo" secondAttribute="top" constant="5" id="ndo-aJ-A4b"/>
-                                            <constraint firstItem="s28-9G-7Nj" firstAttribute="leading" secondItem="VHZ-A0-vHo" secondAttribute="leading" id="oF5-sQ-STv"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxh-mL-h3x">
-                                        <rect key="frame" x="0.0" y="499.5" width="414" height="239.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oui-V4-kud">
-                                                <rect key="frame" x="113" y="95.5" width="188" height="48"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="WeaterUpdate">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="goToWeatherInfo:" destination="5is-k6-swX" eventType="touchUpInside" id="pgz-Ih-SRz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="Oui-V4-kud" firstAttribute="centerX" secondItem="Wxh-mL-h3x" secondAttribute="centerX" id="FHY-My-jGD"/>
-                                            <constraint firstItem="Oui-V4-kud" firstAttribute="centerY" secondItem="Wxh-mL-h3x" secondAttribute="centerY" id="bJd-Op-Lmb"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.30588235294117649" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="mLc-1V-6fJ" firstAttribute="bottom" secondItem="Ora-76-hB6" secondAttribute="bottom" constant="15" id="G4Z-XJ-8Y4"/>
-                            <constraint firstItem="Ora-76-hB6" firstAttribute="top" secondItem="mLc-1V-6fJ" secondAttribute="top" constant="15" id="MsQ-jm-XW6"/>
-                            <constraint firstAttribute="trailing" secondItem="Ora-76-hB6" secondAttribute="trailing" id="nUN-f9-vBp"/>
-                            <constraint firstItem="Ora-76-hB6" firstAttribute="leading" secondItem="mLc-1V-6fJ" secondAttribute="leading" id="rMv-R1-9ou"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="mLc-1V-6fJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Weather" id="rTs-r7-a4J"/>
-                    <connections>
-                        <segue destination="gfH-b7-TkU" kind="presentation" identifier="goToWeatherInfo" id="5c9-zK-EQf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l0Y-8Q-bcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1037.68115942029" y="1537.5"/>
         </scene>
         <!--BMI-->
         <scene sceneID="yV1-6t-wEZ">
@@ -1054,7 +1137,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="goToCalculatePressed:" destination="lgo-a2-gYu" eventType="touchUpInside" id="C6F-Jb-Nuy"/>
+                                                    <action selector="goToCalculatePressed:" destination="lgo-a2-gYu" eventType="touchUpInside" id="XuN-SJ-2Mo"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1093,10 +1176,49 @@
             </objects>
             <point key="canvasLocation" x="1038.6160714285713" y="98.550724637681171"/>
         </scene>
+        <!--Covid19-->
+        <scene sceneID="CPl-af-PgV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIu-hv-wnr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Covid19" id="K8w-Xr-f9P"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Mk-Xb-dc9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ibh-hz-156" kind="relationship" relationship="rootViewController" id="5Sc-zW-GYR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxF-hb-iVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036.231884057971" y="773.4375"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="zpw-Wq-OOK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="05l-5f-2HZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather" id="E5A-ao-gZp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="85p-kE-Cmf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nD3-Rm-A1J" kind="relationship" relationship="rootViewController" id="6hD-P9-mHN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AxM-We-OXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.68115942029" y="1577.6785714285713"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BMICalculator" width="600" height="560"/>
         <image name="Covid19Update" width="626" height="352"/>
+        <image name="ObsesWeight" width="231" height="218"/>
         <image name="Weather" width="259" height="195"/>
         <image name="backgroundimage" width="662" height="662"/>
         <image name="calculate_background" width="375" height="812"/>
