@@ -9,7 +9,7 @@
 import UIKit
 
 class CalculateViewController: UIViewController, UIPopoverPresentationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
-    //MARK: - Variable declaration
+    //MARK: - Properties 
     @IBOutlet weak var weightSlider : UISlider!
     @IBOutlet weak var heightSlider : UISlider!
     @IBOutlet weak var heightLabel: UILabel!

@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    //MARK: - Variable declaration
+    //MARK: - Properties
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     var bmiValue : String?

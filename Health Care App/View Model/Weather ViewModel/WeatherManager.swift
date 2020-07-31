@@ -16,16 +16,16 @@ struct WeatherManager{
         let urlString = "\(weatherURL)&q=\(cityName)"
         print("url = \(urlString)")
         let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=3d94e6a8280d5eddf1819db0038f7adc&units=metric&q=Pune ")
-        performURLRequest(urlString: url)
+        performURLRequest(urlString: url!)
     }
-     func performURLRequest(urlString urlValue: URL?)
+     func performURLRequest(urlString urlValue: URL)
     {
 //        print(urlValue)
 //         let url = URL(fileURLWithPath: urlValue) else {
 //            print("Error")
 //            return
 //        }
-        let task = URLSession.shared.dataTask(with: urlValue!, completionHandler: complitioHandler)
+        let task = URLSession.shared.dataTask(with: urlValue, completionHandler: complitioHandler)
         task.resume()
     }
     

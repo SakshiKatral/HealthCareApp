@@ -10,7 +10,7 @@ import UIKit
 
 class InformationViewController: UIViewController {
     
-    //MARK: - Variable declaration
+    //MARK: - Properties
     @IBOutlet weak var referenceImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

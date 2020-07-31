@@ -8,26 +8,32 @@
 
 import Foundation
 struct CountryList : Codable{
-    var alpha2Code : String?
-    var name : String?
+    var country : String?
+    var slug : String?
+    var iSO2 : String?
     enum CodingKeys: String, CodingKey {
-        case alpha2Code = "alpha2Code"
-        case name = "name"
+        case slug = "Slug"
+        case country = "Country"
+        case iSO2 = "ISO2"
     }
     
     init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
-    alpha2Code = try values.decodeIfPresent(String.self, forKey: .alpha2Code)
-    name = try values.decodeIfPresent(String.self, forKey: .name)
+    slug = try values.decodeIfPresent(String.self, forKey: .slug)
+    country = try values.decodeIfPresent(String.self, forKey: .country)
+    iSO2 = try values.decodeIfPresent(String.self, forKey: .iSO2)
+        
 
 }
 }
 struct CountryName{
-    var alpha2Code : String
-    var name : String
-    init(name: String, alpha2Code: String){
-        self.name = name
-        self.alpha2Code = alpha2Code
+    var country : String
+    var slug : String
+    var iSO2 : String
+    init(country: String, slug: String, iSO2: String){
+        self.country = country
+        self.iSO2 = iSO2
+        self.slug = slug
     }
     
 }

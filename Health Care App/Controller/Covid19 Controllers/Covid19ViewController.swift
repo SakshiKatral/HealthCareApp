@@ -9,8 +9,8 @@
 import UIKit
 
 class Covid19ViewController: UIViewController {
-    
-    
+    //MARK: - Properties
+    var stateDataManager = StateDataManager()
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +22,12 @@ class Covid19ViewController: UIViewController {
         let countryListVC = self.storyboard?.instantiateViewController(withIdentifier: "CounrtyListTableViewController") as! CounrtyListTableViewController
         self.navigationController?.pushViewController(countryListVC, animated: true)
     }
-    
+    @IBAction func goToState(_ sender: UIButton){
+        let indiaDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "IndiaDetailsViewController") as! IndiaDetailsViewController
+        stateDataManager.performURLRequest()
+        guard let totalDetails = stateDataManager.stateLists.first else {print("nil")
+            return}
+        indiaDetailsVC.totalCases = totalDetails
+        self.navigationController?.pushViewController(indiaDetailsVC, animated: true)
+    }
 }

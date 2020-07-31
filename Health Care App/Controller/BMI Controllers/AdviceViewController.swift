@@ -12,7 +12,7 @@ import WebKit
 
 class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WKNavigationDelegate {
     
-    //MARK: - Variable declaration
+    //MARK: - Properties
     @IBOutlet weak var effectURLLink : UIButton!
     @IBOutlet weak var yogaVideo1URLLink : UIButton!
     @IBOutlet weak var yogaVideo2URLLink : UIButton!

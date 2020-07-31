@@ -8,7 +8,7 @@
 
 import Foundation
 class CountryListManager {
-    let urlString = "https://restcountries.eu/rest/v2/all"
+    let urlString = "https://api.covid19api.com/countries"
     var countryLists = [CountryName]()
     var vc : CounrtyListTableViewController?
     func performURLRequest()
@@ -27,7 +27,7 @@ class CountryListManager {
                     
                     for country in countryList{
                         DispatchQueue.main.async {
-                            let countryData = CountryName(name: country.name ?? "", alpha2Code: country.alpha2Code ?? "")
+                            let countryData = CountryName(country: country.country ?? "", slug: country.slug ?? "", iSO2: country.iSO2 ?? "")
                         self.countryLists.append(countryData)
                             self.vc?.tableView.reloadData()
                     }

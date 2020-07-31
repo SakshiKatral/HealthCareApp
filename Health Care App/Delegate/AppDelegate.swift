@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.tintColor = .cyan
         navigationBarAppearace.barTintColor = .systemOrange
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white, NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 25)]
+        navigationBarAppearace.largeTitleTextAttributes = [NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 35)]
         return true
     }
 
