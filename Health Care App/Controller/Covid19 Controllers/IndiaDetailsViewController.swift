@@ -11,7 +11,6 @@ import UIKit
 class IndiaDetailsViewController: UIViewController {
 
     //MARK: - Properties
-//    var stateDataManager = StateDataManager()
     var totalCases : StateData?
     @IBOutlet weak var lastUpdated : UILabel!
     @IBOutlet weak var confirmedCases : UILabel!
@@ -26,9 +25,6 @@ class IndiaDetailsViewController: UIViewController {
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        stateDataManager.vc1 = self
-//        stateDataManager.performURLRequest()
         total.text = "India"
         lastUpdated.text = totalCases?.lastupdatedtime
         activeCases.text = totalCases?.active

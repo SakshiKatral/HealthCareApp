@@ -9,6 +9,7 @@
 import UIKit
 
 class CounrtyListTableViewController: UITableViewController {
+    
     //MARK: - Properties
     var countryListManager = CountryListManager()
     var countryNames = [CountryName]()
@@ -23,8 +24,8 @@ class CounrtyListTableViewController: UITableViewController {
         print(name)
         
     }
-    // MARK: - Table view data source
     
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -41,12 +42,12 @@ class CounrtyListTableViewController: UITableViewController {
         
         return cell
     }
+    
     // MARK: - Table view Delegate and Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let UpdateVC = self.storyboard?.instantiateViewController(identifier: "UpdatedDataTableViewController") as! UpdatedDataTableViewController
         UpdateVC.countryName = countryListManager.countryLists[indexPath.row].country
         self.navigationController?.pushViewController(UpdateVC, animated: true)
     }
-    
     
 }

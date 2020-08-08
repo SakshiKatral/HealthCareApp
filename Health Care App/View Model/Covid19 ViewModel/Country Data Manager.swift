@@ -13,7 +13,6 @@ class  CountryDataManager {
     var vc : UpdatedDataTableViewController?
     func getCountryName(country: String){
         urlString = "https://api.covid19api.com/total/country/\(country)"
-        print(urlString)
     }
     func performURLRequest()
     {
@@ -26,25 +25,24 @@ class  CountryDataManager {
                 print(error!)
                 return
             }
-            if let safeData = data{
-                do{
-                    let countryResponse = try JSONDecoder().decode([CountryModel].self, from: safeData)
-                    print(countryResponse)
-                    
-                    for day in countryResponse{
-                        DispatchQueue.main.async {
-                            if day.confirmed ?? 0 > 0 {
+            guard let safeData = data else{ return}
+            do{
+                let countryResponse = try JSONDecoder().decode([CountryModel].self, from: safeData)
+                
+                for day in countryResponse{
+                    DispatchQueue.main.async {
+                        if day.confirmed ?? 0 > 0 {
                             let days = CountryData(country: day.country ?? "", confirmed: day.confirmed ?? 0, deaths: day.deaths ?? 0, recovered: day.recovered ?? 0, active: day.active ?? 0, date: day.date ?? "")
                             self.counrtyModels.append(days)
                             self.vc?.tableView.reloadData()
-                            }
                         }
                     }
                 }
-                catch{
-                    print(error.localizedDescription)
-                }
             }
+            catch{
+                print(error.localizedDescription)
+            }
+            
         }.resume()
     }
 }

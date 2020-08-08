@@ -11,6 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class StateDataTableViewController: UITableViewController {
+    
     //MARK: - Properties
     var stateDataManager = StateDataManager()
     
@@ -22,7 +23,6 @@ class StateDataTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -87,7 +87,7 @@ class StateDataTableViewController: UITableViewController {
                                               title:  "Details",
                                               handler: { (action:UIContextualAction, view:UIView, completionHandler:(Bool) -> Void) in
                                                 
-                                                self.navigate(stateData: self.stateDataManager.stateLists[indexPath.row])
+                                                self.navigate(stateData: self.stateDataManager.stateLists[indexPath.row + 1])
         })
         actionDelete.backgroundColor = .systemPink
         
@@ -95,7 +95,7 @@ class StateDataTableViewController: UITableViewController {
                                             title:  "District Info",
                                             handler: { (action:UIContextualAction, view:UIView, completionHandler:(Bool) -> Void) in
                                                 
-                                                self.navigate(stateData: self.stateDataManager.stateLists[indexPath.row])
+                                                self.navigate(stateData: self.stateDataManager.stateLists[indexPath.row + 1])
         })
         actionView.backgroundColor = .systemIndigo
         
@@ -104,11 +104,10 @@ class StateDataTableViewController: UITableViewController {
         return configuration
     }
     
+// MARK: - Navigation
     func navigate(stateData: StateData){
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "Covid19DetailsViewController") as! Covid19DetailsViewController
         detailVC.stateDetails = stateData
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
-    
-    
 }
