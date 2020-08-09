@@ -10,6 +10,7 @@
 		040B875D24C6FBAA000BA05D /* Country Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B875C24C6FBAA000BA05D /* Country Model.swift */; };
 		040B875F24C6FBF3000BA05D /* Country Data Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B875E24C6FBF3000BA05D /* Country Data Manager.swift */; };
 		041E8E8D24BB64E800225DEE /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E8E8C24BB64E800225DEE /* BMI.swift */; };
+		041F607524DFE12300636C45 /* Weather Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F607424DFE12300636C45 /* Weather Models.swift */; };
 		0422249E24BB0593002555FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422249D24BB0593002555FE /* AppDelegate.swift */; };
 		042224A024BB0593002555FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422249F24BB0593002555FE /* SceneDelegate.swift */; };
 		042224A224BB0593002555FE /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042224A124BB0593002555FE /* CalculateViewController.swift */; };
@@ -23,7 +24,6 @@
 		04241DED24BF1462001477B2 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEC24BF1462001477B2 /* Information.swift */; };
 		04241DEF24BF1B49001477B2 /* InformationBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEE24BF1B48001477B2 /* InformationBrain.swift */; };
 		0426E62724D165E400288AFE /* StateDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426E62324D165E400288AFE /* StateDataModel.swift */; };
-		042C68A124CAF8900083A495 /* Weather Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68A024CAF8900083A495 /* Weather Model.swift */; };
 		042C68C524CB01830083A495 /* UpdatedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */; };
 		04393AF124C1845E00C76FAF /* Covid19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF024C1845E00C76FAF /* Covid19ViewController.swift */; };
 		04393AF424C1848300C76FAF /* WeatherInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */; };
@@ -59,6 +59,7 @@
 		040B875C24C6FBAA000BA05D /* Country Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Model.swift"; sourceTree = "<group>"; };
 		040B875E24C6FBF3000BA05D /* Country Data Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country Data Manager.swift"; sourceTree = "<group>"; };
 		041E8E8C24BB64E800225DEE /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		041F607424DFE12300636C45 /* Weather Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather Models.swift"; sourceTree = "<group>"; };
 		0422249A24BB0592002555FE /* Health Care App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Care App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0422249D24BB0593002555FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0422249F24BB0593002555FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		04241DEC24BF1462001477B2 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		04241DEE24BF1B48001477B2 /* InformationBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBrain.swift; sourceTree = "<group>"; };
 		0426E62324D165E400288AFE /* StateDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateDataModel.swift; path = ../../../../../Downloads/codegen_5f211f5d60b0a/StateDataModel.swift; sourceTree = "<group>"; };
-		042C68A024CAF8900083A495 /* Weather Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Weather Model.swift"; path = "../../../../Weather Model.swift"; sourceTree = "<group>"; };
 		042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedDataTableViewController.swift; sourceTree = "<group>"; };
 		04393AF024C1845E00C76FAF /* Covid19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19ViewController.swift; sourceTree = "<group>"; };
 		04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformationViewController.swift; sourceTree = "<group>"; };
@@ -274,10 +274,10 @@
 		046BD92724C2B1DC00585D8C /* Weather Model */ = {
 			isa = PBXGroup;
 			children = (
-				042C68A024CAF8900083A495 /* Weather Model.swift */,
 				04ACE40324DC33FE0078E127 /* WeatherForecastModel.swift */,
 				04ACE3FD24DBDD480078E127 /* WeatherCondionModel.swift */,
 				04ACE40124DC0B060078E127 /* WeatherDetailModel.swift */,
+				041F607424DFE12300636C45 /* Weather Models.swift */,
 			);
 			path = "Weather Model";
 			sourceTree = "<group>";
@@ -393,7 +393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F0959E24D19D640097E95E /* IndiaDetailsViewController.swift in Sources */,
-				042C68A124CAF8900083A495 /* Weather Model.swift in Sources */,
 				04EFC91124CED4AF003AB83A /* StateDataTableViewController.swift in Sources */,
 				046C119624DD326300FDD17D /* WeatherForecastTableViewCell.swift in Sources */,
 				04ED1B5224C9A12100EC154D /* Country List Manager.swift in Sources */,
@@ -419,6 +418,7 @@
 				046C2BBD24C0B0C3007ADFAC /* WebViewController.swift in Sources */,
 				0426E62724D165E400288AFE /* StateDataModel.swift in Sources */,
 				042C68C524CB01830083A495 /* UpdatedDataTableViewController.swift in Sources */,
+				041F607524DFE12300636C45 /* Weather Models.swift in Sources */,
 				046C2BBB24C0852C007ADFAC /* AdviceBrain.swift in Sources */,
 				046BD93524C2C9E100585D8C /* WeatherViewController.swift in Sources */,
 				04FCA09724C5E54400F0565B /* WeatherManager.swift in Sources */,
