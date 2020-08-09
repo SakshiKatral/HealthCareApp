@@ -28,9 +28,6 @@
 		04393AF124C1845E00C76FAF /* Covid19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF024C1845E00C76FAF /* Covid19ViewController.swift */; };
 		04393AF424C1848300C76FAF /* WeatherInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */; };
 		0449FF2224C8640F0010C1FB /* Country List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449FF2124C8640F0010C1FB /* Country List.swift */; };
-		046BD92F24C2C78700585D8C /* Weather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92C24C2C78600585D8C /* Weather.jpg */; };
-		046BD93024C2C78700585D8C /* BMICalculator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92D24C2C78700585D8C /* BMICalculator.jpg */; };
-		046BD93124C2C78700585D8C /* Covid19Update.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046BD92E24C2C78700585D8C /* Covid19Update.jpg */; };
 		046BD93324C2C98200585D8C /* Covid19DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD93224C2C98200585D8C /* Covid19DetailsViewController.swift */; };
 		046BD93524C2C9E100585D8C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD93424C2C9E100585D8C /* WeatherViewController.swift */; };
 		046BD93724C2D81700585D8C /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD93624C2D81700585D8C /* BMIViewController.swift */; };
@@ -79,9 +76,6 @@
 		04393AF024C1845E00C76FAF /* Covid19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19ViewController.swift; sourceTree = "<group>"; };
 		04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformationViewController.swift; sourceTree = "<group>"; };
 		0449FF2124C8640F0010C1FB /* Country List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country List.swift"; sourceTree = "<group>"; };
-		046BD92C24C2C78600585D8C /* Weather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Weather.jpg; path = ../../Udemy/Weather.jpg; sourceTree = "<group>"; };
-		046BD92D24C2C78700585D8C /* BMICalculator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BMICalculator.jpg; path = ../../Udemy/BMICalculator.jpg; sourceTree = "<group>"; };
-		046BD92E24C2C78700585D8C /* Covid19Update.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Covid19Update.jpg; path = ../../Udemy/Covid19Update.jpg; sourceTree = "<group>"; };
 		046BD93224C2C98200585D8C /* Covid19DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19DetailsViewController.swift; sourceTree = "<group>"; };
 		046BD93424C2C9E100585D8C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		046BD93624C2D81700585D8C /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
@@ -146,9 +140,6 @@
 				04241DE724BEE095001477B2 /* View Model */,
 				042224B224BB05F2002555FE /* Controller */,
 				042224A624BB059C002555FE /* Assets.xcassets */,
-				046BD92D24C2C78700585D8C /* BMICalculator.jpg */,
-				046BD92E24C2C78700585D8C /* Covid19Update.jpg */,
-				046BD92C24C2C78600585D8C /* Weather.jpg */,
 				042224AB24BB059C002555FE /* Info.plist */,
 			);
 			path = "Health Care App";
@@ -376,11 +367,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046BD93124C2C78700585D8C /* Covid19Update.jpg in Resources */,
 				042224AA24BB059C002555FE /* LaunchScreen.storyboard in Resources */,
 				042224A724BB059C002555FE /* Assets.xcassets in Resources */,
-				046BD92F24C2C78700585D8C /* Weather.jpg in Resources */,
-				046BD93024C2C78700585D8C /* BMICalculator.jpg in Resources */,
 				042224A524BB0593002555FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
