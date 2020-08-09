@@ -9,11 +9,12 @@
 import UIKit
 
 struct BMICalculatorBrain {
+//MARK: -  Properties
     var bmi : BMI?
-    
     var infoArray = ["Female", "Male"]
     var heightarray = ["feet", "meter", "centimeter", "inch"]
     
+//MARK: -  Methods
     mutating func calculateBmi(height: Float, weight: Float, unit: String) {
         var heightInMeter :Float = 0.0
         if unit == "centimeter"{
@@ -28,10 +29,7 @@ struct BMICalculatorBrain {
         else{
             heightInMeter = height
         }
-        
         let bmiValue = weight / pow(heightInMeter, 2)
-        
-        
         if bmiValue < 18.5 {
             bmi = BMI(value: bmiValue, catagory: "Underweight", color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1))
         }
@@ -45,14 +43,17 @@ struct BMICalculatorBrain {
             bmi = BMI(value: bmiValue, catagory: "Obese-weight", color: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))
         }
     }
+    
     func getBMIValue() -> String {
         let bmiTo1DecimalPoint = String(format: "%.1f", bmi?.value ?? 0.0)
         return bmiTo1DecimalPoint
     }
+    
     func getAdvice() -> String {
         let advice = bmi?.catagory
         return advice ?? "No advice"
     }
+    
     func getColor() -> UIColor {
         let color = bmi?.color
         return color ?? .white

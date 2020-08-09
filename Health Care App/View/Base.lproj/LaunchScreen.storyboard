@@ -15,26 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI CALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnm-eK-QUm">
-                                <rect key="frame" x="79" y="430" width="256.5" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to  Health Care App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnm-eK-QUm">
+                                <rect key="frame" x="92.5" y="412" width="229" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" red="0.99063502446358398" green="0.4735025058478497" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="pPu-1V-bsd">
-                                <rect key="frame" x="167" y="526" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="YMY-TW-ebL"/>
-                                    <constraint firstAttribute="width" constant="80" id="lZv-nW-Sbs"/>
-                                </constraints>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.44064121403267176" green="0.98127205225005021" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Lnm-eK-QUm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0sn-qE-5zn"/>
-                            <constraint firstItem="pPu-1V-bsd" firstAttribute="top" secondItem="Lnm-eK-QUm" secondAttribute="bottom" constant="60" id="OFW-1d-SP4"/>
                             <constraint firstItem="Lnm-eK-QUm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U5m-L7-KSv"/>
-                            <constraint firstItem="pPu-1V-bsd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s6C-9e-7nW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

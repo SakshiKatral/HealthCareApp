@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//MARK:- WeatherDetail Model
 struct WeatherDetailModel {
     var description : String
     var pressure : Int
@@ -18,6 +19,7 @@ struct WeatherDetailModel {
     var temparature : Double
     var name : String
 }
+//MARK:- WeatherForecastDetail Model
 struct WeatherForecastDetailModel {
     var description : String
     var pressure : Int

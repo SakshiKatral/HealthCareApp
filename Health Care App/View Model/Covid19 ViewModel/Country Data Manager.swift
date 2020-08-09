@@ -7,25 +7,37 @@
 //
 
 import Foundation
+ //MARK:- Protocol
+protocol CountryDataManagerDelegate {
+func didFailWithError(_ countryDataManager: CountryDataManager, error: String?)
+}
+
 class  CountryDataManager {
+     //MARK:- Properties
     var counrtyModels = [CountryData]()
     var urlString = ""
     var vc : UpdatedDataTableViewController?
+    var delegate : CountryDataManagerDelegate?
+    
+     //MARK:- API Call Method
     func getCountryName(country: String){
         urlString = "https://api.covid19api.com/total/country/\(country)"
     }
     func performURLRequest()
     {
         guard let url = URL(string: urlString) else {
-            
+            self.delegate?.didFailWithError(self, error: "Fail to Convert in URL")
             return
         }
         URLSession.shared.dataTask(with: url) {[self] (data, response, error) in
             if error != nil{
-                print(error!)
+                self.delegate?.didFailWithError(self, error: error?.localizedDescription)
                 return
             }
-            guard let safeData = data else{ return}
+            guard let safeData = data else{
+                self.delegate?.didFailWithError(self, error: error?.localizedDescription)
+                return
+            }
             do{
                 let countryResponse = try JSONDecoder().decode([CountryModel].self, from: safeData)
                 
@@ -40,7 +52,7 @@ class  CountryDataManager {
                 }
             }
             catch{
-                print(error.localizedDescription)
+                self.delegate?.didFailWithError(self, error: error.localizedDescription)
             }
             
         }.resume()

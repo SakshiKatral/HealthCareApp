@@ -21,7 +21,7 @@ class Covid19ViewController: UIViewController {
     
     //MARK: - Navigation
     @IBAction func goToCovid19UpdatePressed(_ sender: UIButton){
-        let countryListVC = self.storyboard?.instantiateViewController(withIdentifier: "CounrtyListTableViewController") as! CounrtyListTableViewController
+        let countryListVC = self.storyboard?.instantiateViewController(withIdentifier: "CountryListTableViewController") as! CountryListTableViewController
         self.navigationController?.pushViewController(countryListVC, animated: true)
     }
     

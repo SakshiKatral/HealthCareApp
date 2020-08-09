@@ -54,7 +54,8 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
     @IBAction func backToInformationPressed(_ sender: UIButton){
         self.dismiss(animated: true, completion: nil)
     }
-    //MARK: Actionsheet for videos
+    
+    //MARK:- Actionsheet for videos
     func showSimpleActionSheet(url: String) {
         let temp = self.url
         let alert = UIAlertController(title: "Title", message: "Open with", preferredStyle: .actionSheet)

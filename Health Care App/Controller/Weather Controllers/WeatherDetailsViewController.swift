@@ -26,7 +26,6 @@ class WeatherDetailsViewController: UIViewController,WeatherManagerDelegate {
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
-        print()
         weatherManager.delegate = self
         weatherManager.detailData(safedata: data)
     }

@@ -32,9 +32,9 @@ class Covid19DetailsViewController: UIViewController {
         deaths.text = stateDetails?.deaths
         confirmedCases.text = stateDetails?.confirmed
         recoveredCases.text = stateDetails?.recovered
-        newDeaths.text = stateDetails?.deltadeaths
-        newConfirmedCases.text = stateDetails?.deltaconfirmed
-        newRecoveredCases.text = stateDetails?.deltarecovered 
+        newDeaths.text = "↑\(stateDetails?.deltadeaths ?? "")"
+        newConfirmedCases.text = "↑\(stateDetails?.deltaconfirmed ?? "")"
+        newRecoveredCases.text = "↑\(stateDetails?.deltarecovered ?? "")"
         
     }
     

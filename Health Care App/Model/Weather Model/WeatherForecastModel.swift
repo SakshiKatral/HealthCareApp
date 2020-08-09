@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//MARK: - WeatherForecastModel Model
 struct WeatherForecastModel: Codable {
         let cod : String?
         let message : Int?
@@ -33,7 +34,7 @@ struct WeatherForecastModel: Codable {
         }
 
     }
-
+//MARK: - City Model
 struct City : Codable {
     let id : Int?
     let name : String?
@@ -69,7 +70,7 @@ struct City : Codable {
     }
 
 }
-
+//MARK: - List Model
 struct List : Codable {
     let dt : Int?
     let main : Main?

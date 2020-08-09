@@ -24,14 +24,8 @@ class WeatherInformationViewController: UIViewController, UITextFieldDelegate,We
         weatherManager.delegate = self
     }
     
-    @IBAction func searchButtonPressed(_ sender: UIButton){
-        searchTextField.endEditing(true)
-        
-        
-    }
-// MARK: - UITextField delegate Methods
+    // MARK: - UITextField delegate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("search is \(searchTextField.text ?? "")")
         searchTextField.endEditing(true)
         return true
     }
@@ -53,6 +47,10 @@ class WeatherInformationViewController: UIViewController, UITextFieldDelegate,We
         
         searchTextField.text = ""
     }
+    @IBAction func searchButtonPressed(_ sender: UIButton){
+        searchTextField.endEditing(true)
+    }
+
     //MARK: - Update User Interface
     func didUpdateWeather(_ weatherManager: WeatherManager,weather: WeatherConditionModel) {
         DispatchQueue.main.async {
@@ -84,9 +82,7 @@ class WeatherInformationViewController: UIViewController, UITextFieldDelegate,We
     
     @IBAction func weatherForcast(_ sender: UIButton){
         let weatherForecastvc = self.storyboard?.instantiateViewController(withIdentifier: "WeatherForeCastTableViewController") as! WeatherForeCastTableViewController
-//        guard let city = searchTextField.text else {return}
         weatherForecastvc.cityName = cityLabel.text ?? ""
-//        print(city)
         self.navigationController?.pushViewController(weatherForecastvc, animated: true)
     }
 }

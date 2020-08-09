@@ -7,34 +7,44 @@
 //
 
 import Foundation
+protocol CountryListManagerDelegate {
+    //MARK:- Protocol
+    func didFailWithError(_ countryListManager: CountryListManager, error: String?)
+}
+
 class CountryListManager {
+    //MARK:- Properties
     let urlString = "https://api.covid19api.com/countries"
     var countryLists = [CountryName]()
-    var vc : CounrtyListTableViewController?
+    var vc : CountryListTableViewController?
+    var delegate : CountryListManagerDelegate?
+    
+    //MARK:- API Call Method
     func performURLRequest()
     {
         let url = URL(string: urlString)
-        print(url!)
         URLSession.shared.dataTask(with: url!) {[self] (data, response, error) in
             if error != nil{
-                print(error!)
+                self.delegate?.didFailWithError(self, error: error?.localizedDescription)
                 return
             }
-            guard let safeData = data else{ return }
+            guard let safeData = data else{
+                self.delegate?.didFailWithError(self, error: error?.localizedDescription)
+                return
+            }
             do{
                 let countryList = try JSONDecoder().decode([CountryList].self, from: safeData)
                 
-                    
-                    for country in countryList{
-                        DispatchQueue.main.async {
-                            let countryData = CountryName(country: country.country ?? "", slug: country.slug ?? "", iSO2: country.iSO2 ?? "")
+                for country in countryList{
+                    DispatchQueue.main.async {
+                        let countryData = CountryName(country: country.country ?? "", slug: country.slug ?? "", iSO2: country.iSO2 ?? "")
                         self.countryLists.append(countryData)
-                            self.vc?.tableView.reloadData()
+                        self.vc?.tableView.reloadData()
                     }
                 }
             }
             catch{
-                print(error.localizedDescription)
+                self.delegate?.didFailWithError(self, error: error.localizedDescription)
             }
         }.resume()
     }

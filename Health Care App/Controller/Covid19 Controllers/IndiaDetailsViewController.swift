@@ -31,14 +31,28 @@ class IndiaDetailsViewController: UIViewController {
         deaths.text = totalCases?.deaths
         confirmedCases.text = totalCases?.confirmed
         recoveredCases.text = totalCases?.recovered
-        newDeaths.text = "\(totalCases?.deltadeaths ?? "")"
-        newConfirmedCases.text = "\(totalCases?.deltaconfirmed ?? "")"
-        newRecoveredCases.text = "\(totalCases?.deltarecovered ?? "")"
+        newDeaths.text = "↑\(totalCases?.deltadeaths ?? "")"
+        newConfirmedCases.text = "↑\(totalCases?.deltaconfirmed ?? "")"
+        newRecoveredCases.text = "↑\(totalCases?.deltarecovered ?? "")"
     }
 
     //MARK: - Navigation
     @IBAction func getStateDetails(_ sender: UIButton){
         let stateListVC = self.storyboard?.instantiateViewController(withIdentifier: "StateDataTableViewController") as! StateDataTableViewController
                self.navigationController?.pushViewController(stateListVC, animated: true)
+    }
+    //MARK:- Error Handling
+    func didFailWithError(_ countryListManager: CountryListManager, error: String?) {
+         DispatchQueue.main.async {
+               let alert = UIAlertController(title: "Oops!",
+                                             message: error,
+                                             preferredStyle: .alert)
+               let cancelAction = UIAlertAction(title: "Close",
+                                                style: .default,
+                                                handler: nil)
+               
+               alert.addAction(cancelAction)
+               self.present(alert, animated: true)
+               }
     }
 }

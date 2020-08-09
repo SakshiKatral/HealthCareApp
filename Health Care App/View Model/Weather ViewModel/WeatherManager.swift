@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//MARK:- Protocol
 protocol WeatherManagerDelegate {
     func didFailWithError(_ weatherManager: WeatherManager, error: Error)
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherConditionModel)
@@ -17,12 +18,14 @@ extension WeatherManagerDelegate{
     func didUpdateWeatherDetail(_ weatherManager: WeatherManager, weatherDetail: WeatherDetailModel){}
 }
 class WeatherManager{
+    //MARK:- Properties
     var weatherModel = [WeatherModel]()
     var delegate : WeatherManagerDelegate?
     let decoder = JSONDecoder()
     var safeData : Data?
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=3d94e6a8280d5eddf1819db0038f7adc&units=metric"
     
+    //MARK:- API Call Method
     func fetchWeatherURL(cityName: String) {
         let str = "\(weatherURL)&q=\(cityName)"
         let urlString = str.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? ""
@@ -50,12 +53,6 @@ class WeatherManager{
         task.resume()
     }
     
-    func detailData(safedata: Data?){
-        guard let safedata = safedata else{return}
-        guard let weatherDetail = self.getWeatherDetails(safedata) else {return}
-        self.delegate?.didUpdateWeatherDetail(self, weatherDetail: weatherDetail)
-        
-    }
     func parseJSON(_ weatherData: Data) -> WeatherConditionModel? {
         
         do{
@@ -69,7 +66,13 @@ class WeatherManager{
             return nil
         }
     }
-    
+    //MARK:- Weather Details
+    func detailData(safedata: Data?){
+        guard let safedata = safedata else{return}
+        guard let weatherDetail = self.getWeatherDetails(safedata) else {return}
+        self.delegate?.didUpdateWeatherDetail(self, weatherDetail: weatherDetail)
+        
+    }
     func getWeatherDetails(_ weatherData: Data) -> WeatherDetailModel? {
         do{
             let weatherResponse = try decoder.decode(WeatherModel.self, from: weatherData)

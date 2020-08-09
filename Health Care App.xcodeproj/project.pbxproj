@@ -47,7 +47,7 @@
 		04ACE40224DC0B060078E127 /* WeatherDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE40124DC0B060078E127 /* WeatherDetailModel.swift */; };
 		04ACE40424DC33FE0078E127 /* WeatherForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ACE40324DC33FE0078E127 /* WeatherForecastModel.swift */; };
 		04ED1B5224C9A12100EC154D /* Country List Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED1B5124C9A12100EC154D /* Country List Manager.swift */; };
-		04ED1B5424C9A6AA00EC154D /* CounrtyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */; };
+		04ED1B5424C9A6AA00EC154D /* CountryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ED1B5324C9A6AA00EC154D /* CountryListTableViewController.swift */; };
 		04EFC90F24CEAD36003AB83A /* CountryDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC90E24CEAD36003AB83A /* CountryDataTableViewCell.swift */; };
 		04EFC91124CED4AF003AB83A /* StateDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC91024CED4AF003AB83A /* StateDataTableViewController.swift */; };
 		04EFC91324CED580003AB83A /* StateDataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFC91224CED580003AB83A /* StateDataCollectionViewCell.swift */; };
@@ -100,7 +100,7 @@
 		04ACE40124DC0B060078E127 /* WeatherDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailModel.swift; sourceTree = "<group>"; };
 		04ACE40324DC33FE0078E127 /* WeatherForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastModel.swift; sourceTree = "<group>"; };
 		04ED1B5124C9A12100EC154D /* Country List Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country List Manager.swift"; sourceTree = "<group>"; };
-		04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounrtyListTableViewController.swift; sourceTree = "<group>"; };
+		04ED1B5324C9A6AA00EC154D /* CountryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewController.swift; sourceTree = "<group>"; };
 		04EFC90E24CEAD36003AB83A /* CountryDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataTableViewCell.swift; sourceTree = "<group>"; };
 		04EFC91024CED4AF003AB83A /* StateDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataTableViewController.swift; sourceTree = "<group>"; };
 		04EFC91224CED580003AB83A /* StateDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				04393AF024C1845E00C76FAF /* Covid19ViewController.swift */,
-				04ED1B5324C9A6AA00EC154D /* CounrtyListTableViewController.swift */,
+				04ED1B5324C9A6AA00EC154D /* CountryListTableViewController.swift */,
 				042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */,
 				04F0959D24D19D640097E95E /* IndiaDetailsViewController.swift */,
 				04EFC91024CED4AF003AB83A /* StateDataTableViewController.swift */,
@@ -427,7 +427,7 @@
 				046BD93524C2C9E100585D8C /* WeatherViewController.swift in Sources */,
 				04FCA09724C5E54400F0565B /* WeatherManager.swift in Sources */,
 				04EFC90F24CEAD36003AB83A /* CountryDataTableViewCell.swift in Sources */,
-				04ED1B5424C9A6AA00EC154D /* CounrtyListTableViewController.swift in Sources */,
+				04ED1B5424C9A6AA00EC154D /* CountryListTableViewController.swift in Sources */,
 				041E8E8D24BB64E800225DEE /* BMI.swift in Sources */,
 				04241DED24BF1462001477B2 /* Information.swift in Sources */,
 				046C119224DD121E00FDD17D /* WeatherForecastManager.swift in Sources */,

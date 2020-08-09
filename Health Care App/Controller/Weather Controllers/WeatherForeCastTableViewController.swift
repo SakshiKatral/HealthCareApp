@@ -16,7 +16,6 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
     var weatherDetails = [WeatherForecastDetailModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(cityName)
         self.navigationItem.title = "\(cityName)"
         weatherForecastManager.delegate = self
         weatherForecastManager.fetchWeatherURL(with: cityName)
@@ -29,14 +28,13 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(weatherForecastManager.weatherForecastDetails)
         return 1
     }
 
-    func didFailWithError(_ weatherManager: WeatherForecastManager, error: Error) {
+    func didFailWithError(_ weatherManager: WeatherForecastManager, error: String?) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Oops!",
-                                          message: error.localizedDescription,
+                                          message: error,
                                           preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Close",
                                              style: .default,
@@ -76,14 +74,13 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
         return weatherForecastManager.weatherForecastDetails[section].date
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
-        let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
-        myLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-       
+    
+        let headerLabel = UILabel()
+        headerLabel.frame = CGRect(x: 0, y: 0, width: 320, height: 50)
+        headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        headerLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         let headerView = UIView()
-        headerView.addSubview(myLabel)
+        headerView.addSubview(headerLabel)
         headerView.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         return headerView
     }

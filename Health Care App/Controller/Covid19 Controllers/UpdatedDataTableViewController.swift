@@ -20,7 +20,6 @@ class UpdatedDataTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = countryName
         countryDataManager.vc = self
-        print(countryName)
         countryDataManager.getCountryName(country: countryName)
         countryDataManager.performURLRequest()
     }
@@ -46,5 +45,19 @@ class UpdatedDataTableViewController: UITableViewController {
         cell?.date.text = "\(countryData.date)"
         
         return cell!
+    }
+    //MARK:- Error Handling
+    func didFailWithError(_ countryListManager: CountryListManager, error: String?) {
+         DispatchQueue.main.async {
+               let alert = UIAlertController(title: "Oops!",
+                                             message: error,
+                                             preferredStyle: .alert)
+               let cancelAction = UIAlertAction(title: "Close",
+                                                style: .default,
+                                                handler: nil)
+               
+               alert.addAction(cancelAction)
+               self.present(alert, animated: true)
+               }
     }
 }
