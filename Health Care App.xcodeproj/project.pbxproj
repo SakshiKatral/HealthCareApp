@@ -23,7 +23,6 @@
 		04241DED24BF1462001477B2 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEC24BF1462001477B2 /* Information.swift */; };
 		04241DEF24BF1B49001477B2 /* InformationBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04241DEE24BF1B48001477B2 /* InformationBrain.swift */; };
 		0426E62724D165E400288AFE /* StateDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426E62324D165E400288AFE /* StateDataModel.swift */; };
-		042C689124CAE6A80083A495 /* Base Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C689024CAE6A80083A495 /* Base Class.swift */; };
 		042C68A124CAF8900083A495 /* Weather Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68A024CAF8900083A495 /* Weather Model.swift */; };
 		042C68C524CB01830083A495 /* UpdatedDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */; };
 		04393AF124C1845E00C76FAF /* Covid19ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04393AF024C1845E00C76FAF /* Covid19ViewController.swift */; };
@@ -75,7 +74,6 @@
 		04241DEC24BF1462001477B2 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		04241DEE24BF1B48001477B2 /* InformationBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBrain.swift; sourceTree = "<group>"; };
 		0426E62324D165E400288AFE /* StateDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateDataModel.swift; path = ../../../../../Downloads/codegen_5f211f5d60b0a/StateDataModel.swift; sourceTree = "<group>"; };
-		042C689024CAE6A80083A495 /* Base Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Base Class.swift"; sourceTree = "<group>"; };
 		042C68A024CAF8900083A495 /* Weather Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Weather Model.swift"; path = "../../../../Weather Model.swift"; sourceTree = "<group>"; };
 		042C68C424CB01830083A495 /* UpdatedDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedDataTableViewController.swift; sourceTree = "<group>"; };
 		04393AF024C1845E00C76FAF /* Covid19ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid19ViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				04393AEE24C1827600C76FAF /* BMI Controllers */,
 				04393AEF24C1843300C76FAF /* Covid19 Controllers */,
 				04393AF224C1846A00C76FAF /* Weather Controllers */,
-				042C689024CAE6A80083A495 /* Base Class.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 				04ACE40024DBF6100078E127 /* WeatherDetailsViewController.swift in Sources */,
 				04241DE924BEE2F1001477B2 /* BMICalctatorBrain.swift in Sources */,
 				04241DE624BEC2BD001477B2 /* InformationViewController.swift in Sources */,
-				042C689124CAE6A80083A495 /* Base Class.swift in Sources */,
 				04241DEF24BF1B49001477B2 /* InformationBrain.swift in Sources */,
 				046C2BBD24C0B0C3007ADFAC /* WebViewController.swift in Sources */,
 				0426E62724D165E400288AFE /* StateDataModel.swift in Sources */,
