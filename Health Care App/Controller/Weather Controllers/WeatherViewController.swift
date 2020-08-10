@@ -13,7 +13,7 @@ class WeatherViewController: UIViewController {
 //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "Weather Update"
         // Do any additional setup after loading the view.
     }
 //MARK: - Navigation

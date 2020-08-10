@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController, UIPopoverPresentationControllerDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+class CalculateViewController: UIViewController {
     //MARK: - Properties 
     @IBOutlet weak var weightSlider : UISlider!
     @IBOutlet weak var heightSlider : UISlider!
@@ -27,7 +27,9 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
         infoPicker.delegate = self
         infoPicker.backgroundColor = .systemIndigo
     }
-    
+}
+
+extension CalculateViewController{
     //MARK: - BMI calculation
     @IBAction func weightHeightSliderChanged(_ sender: UISlider){
         
@@ -63,29 +65,10 @@ class CalculateViewController: UIViewController, UIPopoverPresentationController
         
         bmiCalculatorBrain.calculateBmi(height: height, weight: weight, unit: unit)
         navigationToNext()
-        
     }
-    //MARK: - Navigation
-    func navigationToNext()  {
-        self.performSegue(withIdentifier: "goToResult", sender: self)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToResult"{
-            let resultVC = segue.destination as? ResultViewController
-            resultVC?.bmiValue = bmiCalculatorBrain.getBMIValue()
-            resultVC?.advice = bmiCalculatorBrain.getAdvice()
-            resultVC?.color = bmiCalculatorBrain.getColor()
-            
-        }
-    }
-    
-    @IBAction func backPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
 }
 
-extension CalculateViewController{
+extension CalculateViewController : UIPopoverPresentationControllerDelegate{
     // MARK: - PopOverView to get unit information
     @IBAction func showPicker(_ sender: UIButton) {
         
@@ -107,7 +90,7 @@ extension CalculateViewController{
     }
 }
 
-extension CalculateViewController{
+extension CalculateViewController : UIPickerViewDelegate, UIPickerViewDataSource{
     //MARK: - PickerView data source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -126,3 +109,26 @@ extension CalculateViewController{
         self.dismiss(animated: true, completion: nil)
     }
 }
+
+
+extension CalculateViewController{
+    //MARK: - Navigation
+    func navigationToNext()  {
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult"{
+            let resultVC = segue.destination as? ResultViewController
+            resultVC?.bmiValue = bmiCalculatorBrain.getBMIValue()
+            resultVC?.advice = bmiCalculatorBrain.getAdvice()
+            resultVC?.color = bmiCalculatorBrain.getColor()
+            
+        }
+    }
+    
+    @IBAction func backPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+}
+

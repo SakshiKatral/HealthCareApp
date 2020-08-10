@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CoreLocation
+
 //MARK:- Protocol
 protocol WeatherManagerDelegate {
     func didFailWithError(_ weatherManager: WeatherManager, error: Error)
@@ -28,6 +30,11 @@ class WeatherManager{
     //MARK:- API Call Method
     func fetchWeatherURL(cityName: String) {
         let str = "\(weatherURL)&q=\(cityName)"
+        let urlString = str.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? ""
+        performURLRequest(with: urlString)
+    }
+    func fetchWeatherURL(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let str = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
         let urlString = str.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? ""
         performURLRequest(with: urlString)
     }
@@ -58,7 +65,6 @@ class WeatherManager{
         do{
             let weatherResponse = try decoder.decode(WeatherModel.self, from: weatherData)
             let weather = WeatherConditionModel(conditionID: weatherResponse.weather?[0].id ?? 0, cityName: weatherResponse.name ?? "", temparature: weatherResponse.main?.temp ?? 0.0)
-            print(weather)
             return weather
         }
         catch{

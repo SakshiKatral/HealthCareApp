@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherDetailsViewController: UIViewController,WeatherManagerDelegate {
+class WeatherDetailsViewController: UIViewController {
     
     //MARK: - Properties
     var weatherManager = WeatherManager()
@@ -28,8 +28,19 @@ class WeatherDetailsViewController: UIViewController,WeatherManagerDelegate {
         super.viewDidLoad()
         weatherManager.delegate = self
         weatherManager.detailData(safedata: data)
+        navigationItem.title = "Weather Update"
     }
     
+    //MARK: - Navigation
+    @IBAction func weatherForecast(_ sender: UIButton){
+        let weatherForecastvc = self.storyboard?.instantiateViewController(withIdentifier: "WeatherForeCastTableViewController") as! WeatherForeCastTableViewController
+        weatherForecastvc.cityName = nameLable.text ?? ""
+        self.navigationController?.pushViewController(weatherForecastvc, animated: true)
+    }
+    
+}
+
+extension WeatherDetailsViewController : WeatherManagerDelegate{
     //MARK: - Error Handling Interface
     func didFailWithError(_ weatherManager: WeatherManager, error: Error) {
         DispatchQueue.main.async {
@@ -59,11 +70,4 @@ class WeatherDetailsViewController: UIViewController,WeatherManagerDelegate {
             
         }
     }
-    //MARK: - Navigation
-    @IBAction func weatherForecast(_ sender: UIButton){
-        let weatherForecastvc = self.storyboard?.instantiateViewController(withIdentifier: "WeatherForeCastTableViewController") as! WeatherForeCastTableViewController
-        weatherForecastvc.cityName = nameLable.text ?? ""
-        self.navigationController?.pushViewController(weatherForecastvc, animated: true)
-    }
-    
 }

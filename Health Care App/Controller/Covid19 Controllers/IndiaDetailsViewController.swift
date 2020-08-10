@@ -9,7 +9,7 @@
 import UIKit
 
 class IndiaDetailsViewController: UIViewController {
-
+    
     //MARK: - Properties
     var totalCases : StateData?
     @IBOutlet weak var lastUpdated : UILabel!
@@ -21,11 +21,19 @@ class IndiaDetailsViewController: UIViewController {
     @IBOutlet weak var deaths : UILabel!
     @IBOutlet weak var activeCases : UILabel!
     @IBOutlet weak var total : UILabel!
+    var countryListManager = CountryListManager()
     
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
-        total.text = "India"
+        userInterfaceUpdate()
+        countryListManager.delegate = self
+        self.navigationItem.title = "India"
+    }
+    
+    //MARK:- User Interface update
+    func userInterfaceUpdate(){
+        total.text = totalCases?.state
         lastUpdated.text = totalCases?.lastupdatedtime
         activeCases.text = totalCases?.active
         deaths.text = totalCases?.deaths
@@ -35,24 +43,27 @@ class IndiaDetailsViewController: UIViewController {
         newConfirmedCases.text = "↑\(totalCases?.deltaconfirmed ?? "")"
         newRecoveredCases.text = "↑\(totalCases?.deltarecovered ?? "")"
     }
-
     //MARK: - Navigation
     @IBAction func getStateDetails(_ sender: UIButton){
         let stateListVC = self.storyboard?.instantiateViewController(withIdentifier: "StateDataTableViewController") as! StateDataTableViewController
-               self.navigationController?.pushViewController(stateListVC, animated: true)
+        self.navigationController?.pushViewController(stateListVC, animated: true)
     }
+}
+
+
+extension IndiaDetailsViewController : CountryListManagerDelegate{
     //MARK:- Error Handling
     func didFailWithError(_ countryListManager: CountryListManager, error: String?) {
-         DispatchQueue.main.async {
-               let alert = UIAlertController(title: "Oops!",
-                                             message: error,
-                                             preferredStyle: .alert)
-               let cancelAction = UIAlertAction(title: "Close",
-                                                style: .default,
-                                                handler: nil)
-               
-               alert.addAction(cancelAction)
-               self.present(alert, animated: true)
-               }
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Oops!",
+                                          message: error,
+                                          preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Close",
+                                             style: .default,
+                                             handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
     }
 }

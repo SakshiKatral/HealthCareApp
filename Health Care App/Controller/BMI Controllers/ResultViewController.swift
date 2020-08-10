@@ -23,6 +23,9 @@ class ResultViewController: UIViewController {
         adviceLabel.text = advice
         view.backgroundColor = color
     }
+}
+
+extension ResultViewController{
     //MARK: - Navigation
     @IBAction func reCalculatePressed(_ sender: UIButton){
         self.dismiss(animated: true, completion: nil)

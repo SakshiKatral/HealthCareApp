@@ -26,6 +26,12 @@ class Covid19DetailsViewController: UIViewController {
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
+        userInterfaceUpdate()
+        self.navigationItem.title = "Covid19 Update"
+    }
+    
+    //MARK:- User Interface update
+    func userInterfaceUpdate(){
         total.text = stateDetails?.state
         lastUpdated.text = stateDetails?.lastupdatedtime
         activeCases.text = stateDetails?.active
@@ -38,6 +44,5 @@ class Covid19DetailsViewController: UIViewController {
         
     }
     
-    //MARK: - Navigation
 }
 

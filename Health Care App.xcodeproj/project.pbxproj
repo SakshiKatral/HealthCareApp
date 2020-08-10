@@ -247,7 +247,7 @@
 				04393AF324C1848300C76FAF /* WeatherInformationViewController.swift */,
 				04ACE3FF24DBF6100078E127 /* WeatherDetailsViewController.swift */,
 				046C119324DD18D200FDD17D /* WeatherForeCastTableViewController.swift */,
-				046C119524DD326300FDD17D /* WeatherForecastTableViewCell.swift */,
+				04FBB64324E12DE6003649AC /* Cell */,
 			);
 			path = "Weather Controllers";
 			sourceTree = "<group>";
@@ -307,6 +307,14 @@
 				04EFC90E24CEAD36003AB83A /* CountryDataTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04FBB64324E12DE6003649AC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				046C119524DD326300FDD17D /* WeatherForecastTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

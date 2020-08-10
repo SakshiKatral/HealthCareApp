@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountryListTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate,CountryListManagerDelegate {
+class CountryListTableViewController: UITableViewController {
     
     //MARK: - Properties
     var countryListManager = CountryListManager()
@@ -24,29 +24,11 @@ class CountryListTableViewController: UITableViewController, UISearchResultsUpda
         countryListManager.performURLRequest()
         searchBarSetup()
         tableView.reloadData()
+        navigationItem.title = "CountryList"
     }
-    //MARK: - SearchBar Methods
-    private func searchBarSetup(){
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.delegate = self
-        navigationItem.searchController = searchController
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-           guard let searchText = searchController.searchBar.text else { return }
-           if searchText == "" {
-               countryListManager.performURLRequest()
-               
-           }else{
-               countryListManager.performURLRequest()
-               countryListManager.countryLists = countryListManager.countryLists.filter{
-                $0.country.contains(searchText)
-               }
-               
-           }
-           tableView.reloadData()
-       }
-    
+}
+
+extension CountryListTableViewController{
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -71,6 +53,8 @@ class CountryListTableViewController: UITableViewController, UISearchResultsUpda
         UpdateVC.countryName = countryListManager.countryLists[indexPath.row].country
         self.navigationController?.pushViewController(UpdateVC, animated: true)
     }
+}
+extension CountryListTableViewController : CountryListManagerDelegate{
     
     //MARK:- Error Handling
     func didFailWithError(_ countryListManager: CountryListManager, error: String?) {
@@ -86,4 +70,30 @@ class CountryListTableViewController: UITableViewController, UISearchResultsUpda
                self.present(alert, animated: true)
                }
     }
+}
+
+extension CountryListTableViewController :  UISearchResultsUpdating, UISearchBarDelegate{
+    
+    //MARK: - SearchBar Methods
+    private func searchBarSetup(){
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+           guard let searchText = searchController.searchBar.text else { return }
+           if searchText == "" {
+               countryListManager.performURLRequest()
+               
+           }else{
+               countryListManager.performURLRequest()
+               countryListManager.countryLists = countryListManager.countryLists.filter{
+                $0.country.contains(searchText)
+               }
+               
+           }
+           tableView.reloadData()
+       }
+    
 }

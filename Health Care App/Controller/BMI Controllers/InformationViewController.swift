@@ -21,12 +21,18 @@ class InformationViewController: UIViewController {
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
+        userInterfaceUpdate()
+    }
+    
+    //MARK:- User Interface update
+       func userInterfaceUpdate(){
         data = informationBrain.getData(catagory: catagory)
         referenceImage.image = UIImage(named: data?.image ?? "")
         titleLabel.text = data?.catagory ?? ""
         descriptionLabel.text = data?.details ?? ""
     }
-    
+}
+extension InformationViewController{
     //MARK: - Navigation
     @IBAction func clickForAdvicePresssed(_ sender: UIButton){
         self.performSegue(withIdentifier: "goToAdvice", sender: self)
@@ -34,7 +40,7 @@ class InformationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToAdvice"{
             let adviceVC = segue.destination as? AdviceViewController
-            adviceVC?.catagory = catagory
+            adviceVC?.catagory = self.catagory
         }
     }
     @IBAction func backToResultPresses(_ sender: UIButton){

@@ -22,8 +22,12 @@ class UpdatedDataTableViewController: UITableViewController {
         countryDataManager.vc = self
         countryDataManager.getCountryName(country: countryName)
         countryDataManager.performURLRequest()
-    }
+        countryDataManager.delegate = self
 
+    }
+}
+
+extension UpdatedDataTableViewController{
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -46,8 +50,12 @@ class UpdatedDataTableViewController: UITableViewController {
         
         return cell!
     }
+}
+
+extension UpdatedDataTableViewController : CountryDataManagerDelegate{
+    
     //MARK:- Error Handling
-    func didFailWithError(_ countryListManager: CountryListManager, error: String?) {
+    func didFailWithError(_ countryDataManager: CountryDataManager, error: String?) {
          DispatchQueue.main.async {
                let alert = UIAlertController(title: "Oops!",
                                              message: error,

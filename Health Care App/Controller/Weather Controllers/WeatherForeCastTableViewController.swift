@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherForeCastTableViewController: UITableViewController,WeatherForecastManagerDelegate {
+class WeatherForeCastTableViewController: UITableViewController {
     
     //MARK: - Properties
     var weatherForecastManager = WeatherForecastManager()
@@ -19,8 +19,12 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
         self.navigationItem.title = "\(cityName)"
         weatherForecastManager.delegate = self
         weatherForecastManager.fetchWeatherURL(with: cityName)
+        navigationItem.title = "Weather ForeCast"
+        
     }
+}
 
+extension WeatherForeCastTableViewController{
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,27 +35,6 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
         return 1
     }
 
-    func didFailWithError(_ weatherManager: WeatherForecastManager, error: String?) {
-        DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Oops!",
-                                          message: error,
-                                          preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Close",
-                                             style: .default,
-                                             handler: nil)
-            
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true)
-        }
-    }
-    
-    func didUpdateWeather(_ weatherManager: WeatherForecastManager, weather: [WeatherForecastDetailModel]) {
-        DispatchQueue.main.async {
-            self.weatherDetails = weather
-            self.tableView.reloadData()
-        }
-        
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -84,4 +67,32 @@ class WeatherForeCastTableViewController: UITableViewController,WeatherForecastM
         headerView.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         return headerView
     }
+}
+
+
+extension WeatherForeCastTableViewController : WeatherForecastManagerDelegate{
+    //MARK: - Error Handling Interface
+    func didFailWithError(_ weatherManager: WeatherForecastManager, error: String?) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Oops!",
+                                          message: error,
+                                          preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Close",
+                                             style: .default,
+                                             handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+     //MARK: - Update User Interface
+    func didUpdateWeather(_ weatherManager: WeatherForecastManager, weather: [WeatherForecastDetailModel]) {
+        DispatchQueue.main.async {
+            self.weatherDetails = weather
+            self.tableView.reloadData()
+        }
+        
+    }
+    
 }

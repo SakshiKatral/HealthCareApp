@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import WebKit
 
-class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WKNavigationDelegate {
+class AdviceViewController: UIViewController {
     
     //MARK: - Properties
     @IBOutlet weak var effectURLLink : UIButton!
@@ -28,6 +28,10 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
     //MARK: - LifeCycle Methods of view
     override func viewDidLoad() {
         super.viewDidLoad()
+        userInterfaceUpdate()
+    }
+    //MARK:- User Interface update
+    func userInterfaceUpdate(){
         advice = adviceBrain.getURLLinks(catagory: catagory)
         effectURLLink.setTitle(advice?.effect, for: .normal)
         yogaVideo1URLLink.setTitle(advice?.yogaVideo[0], for: .normal)
@@ -38,13 +42,15 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
         dietPlanVideo2URLLink.setTitle(advice?.dietPlanVideo[1], for: .normal)
         
     }
+}
+
+extension AdviceViewController{
     //MARK: - Navigation
     @IBAction func hitURLPressed(_ sender: UIButton){
         url = sender.currentTitle ?? ""
         showSimpleActionSheet(url: url)
         
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToYouTube"{
             let youTubeVC = segue.destination as? WebViewController
@@ -54,7 +60,9 @@ class AdviceViewController: UIViewController, SFSafariViewControllerDelegate, WK
     @IBAction func backToInformationPressed(_ sender: UIButton){
         self.dismiss(animated: true, completion: nil)
     }
-    
+}
+
+extension AdviceViewController : SFSafariViewControllerDelegate, WKNavigationDelegate{
     //MARK:- Actionsheet for videos
     func showSimpleActionSheet(url: String) {
         let temp = self.url

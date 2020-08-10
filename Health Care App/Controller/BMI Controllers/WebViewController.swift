@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController {
     //MARK: - Properties
     var string : String?
     @IBOutlet weak var webView: WKWebView!
@@ -22,6 +22,14 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         let request = URLRequest(url: url!)
         self.webView.load(request)
     }
+    
+    //MARK: - Navigation
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+}
+extension WebViewController : WKNavigationDelegate{
     //MARK:- WKNavigationDelegate methods
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         let alert = UIAlertController(title: "FAIL", message: "Unable to load url", preferredStyle: .alert)
@@ -30,12 +38,4 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    //MARK: - Navigation
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        
-    }
-    
 }
